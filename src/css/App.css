@@ -1,21 +1,101 @@
+/* Paleta de colores */
+:root {
+    --primary-color: #8D3AEAFF;
+    /* Púrpura/Lavanda (Logo) */
+    --secondary-color-1: #f8f3c7;
+    --secondary-color-2: #76fcdd;
+    --secondary-color-3: #FFCDD2;
+    --neutral-color-light: #F5F5F5;
+    --neutral-color-dark: #333333;
+    --white-color: #FFFFFF;
+
+}
+
+body {
+    background-color: var(--neutral-color-light);
+    color: var(--neutral-color-dark);
+}
+
+/* App.css */
+.app-header {
+    background-color: var(--secondary-color-1);
+    padding: 20px;
+    text-align: center;
+}
+
+.app-footer {
+    background-color: var(--neutral-color-light);
+    padding: 10px;
+    text-align: center;
+    font-size: 0.8em;
+}
+
 .custom-navbar {
-    background-color: #a8e6a6;
-  }
-  
-  .custom-navbar .nav-link {
-    color: #333;
+    background-color: var(--primary-color);
+    color: var(--white-color) !important;
+}
+
+.custom-navbar .nav-link {
+    color: var(--white-color) !important;
     transition: all 0.3s ease;
     margin: 0 5px;
     padding: 10px 15px;
     border-radius: 5px;
-  }
-  
-  .custom-navbar .nav-link:hover {
-    background-color: #007bff;
-    color: white;
-  }
-  
-  .custom-navbar .nav-link svg {
+}
+
+.custom-navbar .nav-link:hover {
+    background-color: var(--secondary-color-2);
+    color: var(--white-color) !important;
+}
+
+.custom-navbar .nav-link {
     margin-right: 5px;
-  }
-  
+    color: var(--secondary-color-2) !important;
+
+}
+
+.navbar-brand-custom {
+    flex: 0 0 auto;
+    margin-right: 1rem;
+}
+
+.custom-navbar .nav-link {
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+}
+
+@media (max-width: 991.98px) {
+    .custom-navbar .navbar-nav {
+        flex-direction: column;
+    }
+
+    .custom-navbar .nav-link {
+        padding: 0.5rem 0;
+    }
+}
+
+
+/*  Ejemplo para botones */
+.btn-primary {
+    background-color: var(--secondary-color-1);
+    border-color: var(--secondary-color-1);
+    color: var(--neutral-color-dark);
+}
+
+.btn-primary:hover {
+    background-color: darken(var(--secondary-color-1), 10%);
+    border-color: darken(var(--secondary-color-1), 10%);
+}
+
+/* Ejemplo para tarjetas */
+.card {
+    background-color: var(--white-color);
+    border: 1px solid var(--neutral-color-light);
+}
+
+.logo-svg {
+    height: 60px;
+    /* Ajusta este valor según tus necesidades */
+    width: auto;
+}
+

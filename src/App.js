@@ -12,17 +12,20 @@ import Contacto from './components/Contacto';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import './css/App.css'; 
+import './css/App.css';
+import Logo from './imgs/logo.js';
+
 
 function App() {
   return (
     <Router>
       <Navbar expand="lg" className="sticky-top custom-navbar">
         <Container>
-          <Navbar.Brand>Tranquilopatitas</Navbar.Brand>
+        <div className='container'><Logo className="logo-svg" /></div>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
+              
               <Nav.Link as={Link} to="/"><FaHome /> Quién soy</Nav.Link>
               <Nav.Link as={Link} to="/alojamiento"><FaBed /> Alojamiento</Nav.Link>
               <Nav.Link as={Link} to="/cuidado-domicilio"><FaDog /> Cuidado a domicilio</Nav.Link>
@@ -35,8 +38,9 @@ function App() {
         </Container>
       </Navbar>
 
+
       <div className="d-flex flex-column min-vh-100 mt-3">
-        <header className="container">
+        <header className="container app-header">
           <h1>Tranquilopatitas: Cuidado de Mascotas en León</h1>
           <p>Tu solución de confianza para el bienestar y el cuidado de tus mascotas en León.</p>
         </header>
@@ -53,7 +57,7 @@ function App() {
           </Routes>
         </Container>
 
-        <footer className="container">
+        <footer className="container app-footer">
           <p>© 2025 Tranquilopatitas - Cuidado de Mascotas en León</p>
         </footer>
       </div>
