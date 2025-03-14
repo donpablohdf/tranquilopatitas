@@ -1,15 +1,12 @@
 /* Paleta de colores */
 :root {
-    --primary-color: #8D3AEAFF;
-    /* Púrpura/Lavanda (Logo) */
-    --secondary-color-1: #f8f3c7;
-    --secondary-color-2: #76fcdd;
-    --secondary-color-3: #FFCDD2;
-    --neutral-color-light: #F5F5F5;
-    --neutral-color-dark: #333333;
-    --white-color: #FFFFFF;
-
-}
+    --primary-color: #64B5F6;   /* Azul Suave */
+    --secondary-color-1: #c3d8c4;   /* Verde Oliva */
+    --secondary-color-2: #546E7A;   /* Beige Cálido */
+    --neutral-color-light: #F0F4C3; /* Blanco Roto */
+    --neutral-color-dark: #546E7A;  /* Gris Oscuro Suave */
+    --white-color: #FFFFFF;        /* Blanco */
+  }
 
 body {
     background-color: var(--neutral-color-light);
@@ -31,7 +28,7 @@ body {
 }
 
 .custom-navbar {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color-1);
     color: var(--white-color) !important;
 }
 
@@ -64,17 +61,6 @@ body {
     white-space: nowrap;
 }
 
-@media (max-width: 991.98px) {
-    .custom-navbar .navbar-nav {
-        flex-direction: column;
-    }
-
-    .custom-navbar .nav-link {
-        padding: 0.5rem 0;
-    }
-}
-
-
 /*  Ejemplo para botones */
 .btn-primary {
     background-color: var(--secondary-color-1);
@@ -92,10 +78,3 @@ body {
     background-color: var(--white-color);
     border: 1px solid var(--neutral-color-light);
 }
-
-.logo-svg {
-    height: 60px;
-    /* Ajusta este valor según tus necesidades */
-    width: auto;
-}
-
