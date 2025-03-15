@@ -1,12 +1,13 @@
-/* Paleta de colores */
-:root {
+
+  /* Paleta de colores */
+  :root {
     --primary-color: #64B5F6;   /* Azul Suave */
     --secondary-color-1: #c3d8c4;   /* Verde Oliva */
     --secondary-color-2: #546E7A;   /* Beige Cálido */
     --neutral-color-light: #F0F4C3; /* Blanco Roto */
     --neutral-color-dark: #546E7A;  /* Gris Oscuro Suave */
     --white-color: #FFFFFF;        /* Blanco */
-  }
+}
 
 body {
     background-color: var(--neutral-color-light);
@@ -36,29 +37,18 @@ body {
     color: var(--white-color) !important;
     transition: all 0.3s ease;
     margin: 0 5px;
-    padding: 10px 15px;
+    padding: 0.5rem 1rem;
     border-radius: 5px;
+    white-space: nowrap;
 }
 
 .custom-navbar .nav-link:hover {
     background-color: var(--secondary-color-2);
-    color: var(--white-color) !important;
-}
-
-.custom-navbar .nav-link {
-    margin-right: 5px;
-    color: var(--secondary-color-2) !important;
-
 }
 
 .navbar-brand-custom {
     flex: 0 0 auto;
     margin-right: 1rem;
-}
-
-.custom-navbar .nav-link {
-    padding: 0.5rem 1rem;
-    white-space: nowrap;
 }
 
 /*  Ejemplo para botones */
@@ -77,4 +67,8 @@ body {
 .card {
     background-color: var(--white-color);
     border: 1px solid var(--neutral-color-light);
+}
+
+.card h2, h3 {
+    color: var(--neutral-color-dark);
 }
