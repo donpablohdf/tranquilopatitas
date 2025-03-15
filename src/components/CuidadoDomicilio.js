@@ -5,8 +5,7 @@ function CuidadoDomicilio() {
   return (
     <article>
       <Card className="mb-4">        
-          <Card.Body className="d-flex flex-column flex-md-row p-0">
-            
+          <Card.Body className="d-flex flex-column flex-md-row p-0">            
             <div className="flex-grow-1 p-3">
               <h3>Cuidado a domicilio</h3>
               <h4 className="mb-2 text-muted">Cuidado de mascotas nocturno en la comodidad de tu hogar</h4>
@@ -22,10 +21,9 @@ function CuidadoDomicilio() {
                 <p>Estamos comprometidos a ser la solución ideal para el cuidado nocturno de tus mascotas en León, asegurando que tanto tú como tus compañeros peludos puedan disfrutar de una noche tranquila y sin preocupaciones. Con atención personalizada y un enfoque en su bienestar, tu hogar y tus mascotas estarán en las mejores manos. Confía en nosotros para brindarles cariño, seguridad y rutinas que se ajusten a sus necesidades. ¡Esperamos poder acompañarte pronto y formar parte de la tranquilidad y felicidad de tu familia! 😊🐾</p>
               </Card.Text>
             </div>
-            <Card.Img
-              variant="right"
+            <Card.Img              
               src="/imgs/visita-nocturna-mascotas-leon.webp"
-              alt="Imagen de Alojamiento"
+              alt="visita mascotas Leon"
               className="imagen-responsiva"              
             />
           </Card.Body>

@@ -9,7 +9,7 @@ function VisitasDomicilio() {
         <div className="d-flex flex-column flex-md-row">
           <Card.Img
             src="/imgs/visitas-domicilio-mascotas-leon.webp"
-            alt="Visitas a domicilio"
+            alt="Visitas a domicilio mascotas Leon"
             className="imagen-responsiva"
           />
           <Card.Body>

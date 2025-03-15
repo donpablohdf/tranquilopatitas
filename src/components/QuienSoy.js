@@ -27,10 +27,9 @@ function QuienSoy() {
             </Card.Text>
             
           </div>
-          <Card.Img
-            variant="right"
+          <Card.Img            
             src="/imgs/quien-soy-mascotas-leon.webp"
-            alt="Imagen de Quien Soy"
+            alt="Cuidado de mascotas en León"
             className="imagen-responsiva"
           />
         </Card.Body>

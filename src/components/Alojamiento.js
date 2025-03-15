@@ -9,7 +9,7 @@ function Alojamiento() {
       <div className="d-flex flex-column flex-md-row">
           <Card.Img            
             src="/imgs/alojamiento-mascotas-leon.webp"
-            alt="Imagen de Alojamiento"
+            alt="Alojamiento mascotas Leon"
             className="imagen-responsiva"            
           />
           <Card.Body>

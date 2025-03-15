@@ -23,7 +23,7 @@ function GuarderiaDia() {
           </div>
           <Card.Img 
             src="/imgs/guarderia-de-dia-mascotas-leon.webp"
-            alt="Guardería de día"
+            alt="Guardería de día mascotas Leon"
             className="imagen-responsiva"  
           />
         </Card.Body>

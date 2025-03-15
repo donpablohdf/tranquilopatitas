@@ -9,7 +9,7 @@ function PaseoPerros() {
       <div className="d-flex flex-column flex-md-row">
         <Card.Img           
           src="/imgs/paseo-perros-mascotas-leon.webp" 
-          alt="Paseo de perros" 
+          alt="Paseo de perros en Leon" 
           className="imagen-responsiva"   
         />
         <Card.Body>
