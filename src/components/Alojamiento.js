@@ -6,12 +6,11 @@ function Alojamiento() {
   return (
     <article>
       <Card className="mb-4">
-        <div className="d-flex">
-          <Card.Img
-            variant="left"
+      <div className="d-flex flex-column flex-md-row">
+          <Card.Img            
             src="/imgs/alojamiento-mascotas-leon.webp"
             alt="Imagen de Alojamiento"
-            style={{ width: '100%', objectFit: 'cover' }}
+            className="imagen-responsiva"            
           />
           <Card.Body>
             <h3>Alojamiento de mascotas</h3>

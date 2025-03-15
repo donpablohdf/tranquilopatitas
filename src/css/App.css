@@ -72,3 +72,64 @@ body {
 .card h2, h3 {
     color: var(--neutral-color-dark);
 }
+.imagen-responsiva {
+    width: 100%;
+    height: auto;
+    max-width: 300px; /* Default max-width for larger screens */
+    object-fit: cover;
+  }
+  
+  /* Media query for small mobile devices (portrait) */
+  @media (max-width: 320px) {
+    .imagen-responsiva {
+      max-width: 100%; /* Full width on very small mobile devices */
+    }
+  
+    .d-flex {
+      flex-direction: column; /* Stack the layout on very small mobile devices */
+    }
+  }
+  
+  /* Media query for mobile devices */
+  @media (min-width: 321px) and (max-width: 599px) {
+    .imagen-responsiva {
+      max-width: 100%; /* Full width on mobile devices */
+    }
+  
+    .d-flex {
+      flex-direction: column; /* Stack the layout on mobile devices */
+    }
+  }
+  
+  /* Media query for tablets */
+  @media (min-width: 600px) and (max-width: 899px) {
+    .imagen-responsiva {
+      max-width: 50%; /* Allow the image to take up half the width on tablets */
+    }
+  
+    .d-flex {
+      flex-direction: row; /* Ensure the layout is side by side on tablets */
+    }
+  }
+  
+  /* Media query for small laptops */
+  @media (min-width: 900px) and (max-width: 1199px) {
+    .imagen-responsiva {
+      max-width: 40%; /* Adjust the image width for small laptops */
+    }
+  
+    .d-flex {
+      flex-direction: row; /* Side by side layout on small laptops */
+    }
+  }
+  
+  /* Media query for large laptops and desktops */
+  @media (min-width: 1200px) {
+    .imagen-responsiva {
+      max-width: 30%; /* Adjust the image width for large laptops and desktops */
+    }
+  
+    .d-flex {
+      flex-direction: row; /* Side by side layout on large laptops and desktops */
+    }
+  }

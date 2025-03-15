@@ -5,14 +5,14 @@ function VisitasDomicilio() {
   return (
     <article>
       <Card className="mb-4">
-        <Card.Body className="d-flex p-0">
-          <Card.Img 
+
+        <div className="d-flex flex-column flex-md-row">
+          <Card.Img
             src="/imgs/visitas-domicilio-mascotas-leon.webp"
             alt="Visitas a domicilio"
-            className="mr-4"
-            style={{ width: '100%', height: 'auto', objectFit: 'cover' }} 
+            className="imagen-responsiva"
           />
-          <div className="flex-grow-1 p-3">
+          <Card.Body>
             <h3>Visitas a domicilio</h3>
             <h4 className="mb-2 text-muted">Visitas a tu mascota en tu propio hogar</h4>
             <Card.Text>
@@ -24,8 +24,8 @@ function VisitasDomicilio() {
 
               <p>Nuestro compromiso va más allá de simplemente visitar a tus mascotas. Buscamos crear una conexión genuina con ellas, asegurándonos de que se sientan amadas y acompañadas en todo momento. También sabemos lo importante que es para ti estar al tanto de cómo están, por lo que te proporcionaremos actualizaciones después de cada visita, ya sea a través de mensajes, fotos o videos, para que puedas estar tranquilo sabiendo que están en buenas manos.</p>
             </Card.Text>
-          </div>
-        </Card.Body>
+          </Card.Body>
+        </div>
       </Card>
     </article>
   );

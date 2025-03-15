@@ -6,15 +6,12 @@ function QuienSoy() {
   return (
     <article>
       <Card className="mb-4">
-        <Card.Body className="d-flex flex-row-reverse p-0">
-          <Card.Img 
-            src="/imgs/quien-soy-mascotas-leon.webp"
-            alt="Imagen de Quien Soy"
-            className="ml-4"
-            style={{ width: '100%', height: 'auto', objectFit: 'cover' }} 
-          />
+        <Card.Body className="d-flex flex-column flex-md-row p-0">
+          
           <div className="flex-grow-1 p-3">
             <h2>Quién soy</h2>
+            <h4 className="mb-2 text-muted">Cuidado de mascotas en León</h4>
+
             <Card.Text>
               <p>Permíteme presentarme: soy Pablo, el fundador de TRANQUILOPATITAS, y desde siempre he tenido una conexión especial con los animales. Mi amor por las mascotas no solo es un interés personal, sino una verdadera vocación que me ha llevado a dedicar mi tiempo y energía a su bienestar. A través de estos servicios, busco crear un puente de confianza entre tú, tus peludos compañeros y yo, asegurándome de que siempre reciban la atención y el cariño que merecen.</p>
 
@@ -28,7 +25,14 @@ function QuienSoy() {
 
               <p>Gracias por considerar TRANQUILOPATITAS. Espero conocerte pronto y ser parte del bienestar de tu compañero peludo. ¡Hasta pronto!😊🐾</p>
             </Card.Text>
+            
           </div>
+          <Card.Img
+            variant="right"
+            src="/imgs/quien-soy-mascotas-leon.webp"
+            alt="Imagen de Quien Soy"
+            className="imagen-responsiva"
+          />
         </Card.Body>
       </Card>
     </article>

@@ -5,7 +5,7 @@ function GuarderiaDia() {
   return (
     <article>
       <Card className="mb-4">
-        <Card.Body className="d-flex p-0">
+        <Card.Body className="d-flex flex-column flex-md-row p-0">
           <div className="flex-grow-1 p-3">
             <h3>Guardería de día</h3>
             <h4 className="mb-2 text-muted">Cuidado de mascotas diurno en mi propio hogar</h4>
@@ -24,8 +24,7 @@ function GuarderiaDia() {
           <Card.Img 
             src="/imgs/guarderia-de-dia-mascotas-leon.webp"
             alt="Guardería de día"
-            className="ml-4"
-            style={{ width: '100%', height: 'auto', objectFit: 'cover' }} 
+            className="imagen-responsiva"  
           />
         </Card.Body>
       </Card>

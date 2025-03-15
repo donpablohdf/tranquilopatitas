@@ -5,15 +5,16 @@ import Card from 'react-bootstrap/Card';
 function PaseoPerros() {
   return (
     <article>
-      <Card className="mb-4" style={{ display: 'flex', flexDirection: 'row' }}>
-        <Card.Img 
-          variant="left" 
+      <Card className="mb-4">
+      <div className="d-flex flex-column flex-md-row">
+        <Card.Img           
           src="/imgs/paseo-perros-mascotas-leon.webp" 
           alt="Paseo de perros" 
-          style={{ width: '100%', objectFit: 'cover' }}
+          className="imagen-responsiva"   
         />
         <Card.Body>
           <h3>Paseo de perros</h3>
+          <h4 className="mb-2 text-muted">Cuidado de mascotas</h4>
           <Card.Text>
             <p>En TRANQUILOPATITAS, ofrezco un servicio personalizado de paseo de perros en León, diseñado para que tus compañeros peludos disfruten al máximo de su tiempo al aire libre. Sé lo importante que es para ti que tu perro reciba ejercicio, estimulación mental y momentos de diversión, incluso cuando tu agenda no te permite acompañarlo. Por eso, estoy aquí para ser el compañero de aventuras diarias de tu perro, brindándole caminatas seguras, saludables y llenas de energía.</p>
 
@@ -25,8 +26,9 @@ function PaseoPerros() {
 
             <p>Espero convertirme en el compañero de paseo de tu perro y de descubrir juntos los rincones más hermosos de León. Mi objetivo es que cada caminata sea más que un simple paseo: una oportunidad para que tu perro explore, se ejercite y viva experiencias positivas que contribuyan a su bienestar integral. ¡Espero conocerte pronto y formar parte de las aventuras diarias de tu peludo amigo! 😊🐾</p>
 
-          </Card.Text>
-        </Card.Body>
+            </Card.Text>
+          </Card.Body>
+        </div>
       </Card>
     </article>
   );
