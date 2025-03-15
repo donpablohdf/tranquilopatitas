@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, NavLink, Routes } from 'react-router-dom';
-import { FaHome, FaBed, FaDog, FaWalking, FaCalendarAlt, FaPaw, FaEnvelope } from 'react-icons/fa';
+import { FaHome, FaBed, FaDog, FaWalking, FaCalendarAlt, FaPaw, FaEnvelope, FaEllipsisH } from 'react-icons/fa';
 import QuienSoy from './components/QuienSoy';
 import Alojamiento from './components/Alojamiento';
 import CuidadoDomicilio from './components/CuidadoDomicilio';
@@ -9,6 +9,7 @@ import VisitasDomicilio from './components/VisitasDomicilio';
 import GuarderiaDia from './components/GuarderiaDia';
 import PaseoPerros from './components/PaseoPerros';
 import Contacto from './components/Contacto';
+import Llamadas from './components/Softphone';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -95,12 +96,12 @@ function App() {
               </Nav.Item>
               <Nav.Item>
                 <NavLink
-                  to="/contacto-mascotas-leon"
+                  to="/llamadas-mascotas-leon"
                   end
                   onClick={handleNavClick}
                   className={({ isActive }) => (isActive ? "active-link nav-link" : "nav-link")}
                 >
-                  <FaEnvelope /> Contacto
+                  <FaEllipsisH /> Otros servicios
                 </NavLink>
               </Nav.Item>
               <Nav.Item>
@@ -131,6 +132,7 @@ function App() {
             <Route path="/visitas-domicilio-mascotas-leon" element={<VisitasDomicilio />} />
             <Route path="/guarderia-dia-mascotas-leon" element={<GuarderiaDia />} />
             <Route path="/paseo-perros-leon" element={<PaseoPerros />} />
+            <Route path="/llamadas-mascotas-leon" element={<Llamadas />} />
             <Route path="/contacto-mascotas-leon" element={<Contacto />} />
           </Routes>
         </Container>
