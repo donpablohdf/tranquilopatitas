@@ -103,6 +103,16 @@ function App() {
                   <FaEnvelope /> Contacto
                 </NavLink>
               </Nav.Item>
+              <Nav.Item>
+                <NavLink
+                  to="/contacto-mascotas-leon"
+                  end
+                  onClick={handleNavClick}
+                  className={({ isActive }) => (isActive ? "active-link nav-link" : "nav-link")}
+                >
+                  <FaEnvelope /> Contacto
+                </NavLink>
+              </Nav.Item>
             </Nav>
           </Navbar.Collapse>
         </Container>

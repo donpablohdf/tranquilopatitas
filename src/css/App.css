@@ -46,6 +46,11 @@ body {
     background-color: var(--secondary-color-2);
 }
 
+.active-link {
+  background-color: var(--secondary-color-2);
+}
+
+
 .navbar-brand-custom {
     flex: 0 0 auto;
     margin-right: 1rem;
