@@ -9,7 +9,7 @@ import VisitasDomicilio from './components/VisitasDomicilio';
 import GuarderiaDia from './components/GuarderiaDia';
 import PaseoPerros from './components/PaseoPerros';
 import Contacto from './components/Contacto';
-import Llamadas from './components/Softphone';
+import OtrosServicios from './components/OtrosServicios';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -96,7 +96,7 @@ function App() {
               </Nav.Item>
               <Nav.Item>
                 <NavLink
-                  to="/llamadas-mascotas-leon"
+                  to="/servicios-mascotas-leon"
                   end
                   onClick={handleNavClick}
                   className={({ isActive }) => (isActive ? "active-link nav-link" : "nav-link")}
@@ -132,7 +132,7 @@ function App() {
             <Route path="/visitas-domicilio-mascotas-leon" element={<VisitasDomicilio />} />
             <Route path="/guarderia-dia-mascotas-leon" element={<GuarderiaDia />} />
             <Route path="/paseo-perros-leon" element={<PaseoPerros />} />
-            <Route path="/llamadas-mascotas-leon" element={<Llamadas />} />
+            <Route path="/servicios-mascotas-leon" element={<OtrosServicios />} />
             <Route path="/contacto-mascotas-leon" element={<Contacto />} />
           </Routes>
         </Container>
