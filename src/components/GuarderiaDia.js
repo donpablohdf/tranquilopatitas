@@ -8,7 +8,7 @@ function GuarderiaDia() {
         <Card.Body className="d-flex flex-column flex-md-row p-0">
           <div className="flex-grow-1 p-3">
             <h3>Guardería de día</h3>
-            <h4 className="mb-2 text-muted">Cuidado de mascotas diurno en mi propio hogar</h4>
+            <h4 className="mb-2 text-muted">Cuidado diurno en mi propio hogar</h4>
             <Card.Text>
               <p>En <strong>TRANQUILOPATITAS</strong>, ofrecemos un servicio de guardería diurna para mascotas en un entorno acogedor y seguro: ¡mi propio hogar! Sabemos lo importante que es para ti asegurarte de que tus compañeros peludos estén bien atendidos durante el día mientras tú estás ocupado. Por eso, hemos creado un espacio diseñado especialmente para que tus mascotas disfruten, jueguen y descansen como si estuvieran en su propio hogar.</p>
 

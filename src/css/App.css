@@ -13,6 +13,9 @@ body {
     background-color: var(--neutral-color-light);
     color: var(--neutral-color-dark);
 }
+.principal{
+  width: 100%;
+}
 
 /* App.css */
 .app-header {
@@ -29,6 +32,7 @@ body {
 }
 
 .custom-navbar {
+  width: 100%;
     background-color: var(--secondary-color-1);
     color: var(--white-color) !important;
 }
@@ -79,7 +83,7 @@ body {
 }
 .imagen-responsiva {
     width: 100%;
-    height: auto;
+    height: 100%;
     max-width: 300px; /* Default max-width for larger screens */
     object-fit: cover;
   }

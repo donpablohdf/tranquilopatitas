@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, NavLink, Routes } from 'react-router-dom';
-import { FaHome, FaBed, FaDog, FaWalking, FaCalendarAlt, FaPaw, FaEnvelope, FaEllipsisH } from 'react-icons/fa';
+import { FaHome, FaBed, FaDog, FaWalking, FaCalendarAlt, FaPaw, FaEnvelope, FaUtensils, FaStethoscope } from 'react-icons/fa';
 import QuienSoy from './components/QuienSoy';
 import Alojamiento from './components/Alojamiento';
 import CuidadoDomicilio from './components/CuidadoDomicilio';
@@ -9,13 +9,13 @@ import VisitasDomicilio from './components/VisitasDomicilio';
 import GuarderiaDia from './components/GuarderiaDia';
 import PaseoPerros from './components/PaseoPerros';
 import Contacto from './components/Contacto';
-import OtrosServicios from './components/OtrosServicios';
+import Veterinario from './components/Veterinario';
+import Alimentacion from './components/Alimentacion';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import './css/App.css';
 import Logo from './imgs/logo.js';
-
 
 function App() {
   const [expanded, setExpanded] = useState(false);
@@ -26,116 +26,56 @@ function App() {
     }
   };
 
+  const navLinks = [
+    { path: '/', icon: <FaHome />, title: 'Quién soy', component: QuienSoy },
+    { path: '/alojamiento-mascotas-leon', icon: <FaBed />, title: 'Alojamiento', component: Alojamiento },
+    { path: '/cuidado-domicilio-mascotas-leon', icon: <FaDog />, title: 'Cuidado a domicilio', component: CuidadoDomicilio },
+    { path: '/visitas-domicilio-mascotas-leon', icon: <FaWalking />, title: 'Visitas a domicilio', component: VisitasDomicilio },
+    { path: '/guarderia-dia-mascotas-leon', icon: <FaCalendarAlt />, title: 'Guardería de día', component: GuarderiaDia },
+    { path: '/paseo-perros-leon', icon: <FaPaw />, title: 'Paseo de perros', component: PaseoPerros },
+    { path: '/comida-mascotas-leon', icon: <FaUtensils />, title: 'Comida a domicilio', component: Alimentacion },
+    { path: '/veterinario-mascotas-leon', icon: <FaStethoscope />, title: 'Visitas al veterinario', component: Veterinario },
+    { path: '/contacto-mascotas-leon', icon: <FaEnvelope />, title: 'Contacto', component: Contacto }
+  ];
+
   return (
     <Router>
-      <Navbar expand="lg" className="sticky-top custom-navbar" expanded={expanded} onToggle={(e) => { }} collapseOnSelect>
-        <Container>
-          <div><Logo color='#FFFFFF' /></div>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(!expanded)} />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Item>
+      <Navbar expand="lg" className="sticky-top custom-navbar" expanded={expanded} collapseOnSelect>
+
+        <div className='ms-2'><Logo color='#FFFFFF' /></div>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(!expanded)} />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            {navLinks.map((link, index) => (
+              <Nav.Item key={index}>
                 <NavLink
-                  to="/"
+                  to={link.path}
                   end
                   onClick={handleNavClick}
                   className={({ isActive }) => (isActive ? "active-link nav-link" : "nav-link")}
                 >
-                  <FaHome /> Quién soy
+                  {link.icon} {link.title}
                 </NavLink>
               </Nav.Item>
-              <Nav.Item>
-                <NavLink
-                  to="/alojamiento-mascotas-leon"
-                  end
-                  onClick={handleNavClick}
-                  className={({ isActive }) => (isActive ? "active-link nav-link" : "nav-link")}
-                >
-                  <FaBed /> Alojamiento
-                </NavLink>
-              </Nav.Item>
-              <Nav.Item>
-                <NavLink
-                  to="/cuidado-domicilio-mascotas-leon"
-                  end
-                  onClick={handleNavClick}
-                  className={({ isActive }) => (isActive ? "active-link nav-link" : "nav-link")}
-                >
-                  <FaDog /> Cuidado a domicilio
-                </NavLink>
-              </Nav.Item>
-              <Nav.Item>
-                <NavLink
-                  to="/visitas-domicilio-mascotas-leon"
-                  end
-                  onClick={handleNavClick}
-                  className={({ isActive }) => (isActive ? "active-link nav-link" : "nav-link")}
-                >
-                  <FaWalking /> Visitas a domicilio
-                </NavLink>
-              </Nav.Item>
-              <Nav.Item>
-                <NavLink
-                  to="/guarderia-dia-mascotas-leon"
-                  end
-                  onClick={handleNavClick}
-                  className={({ isActive }) => (isActive ? "active-link nav-link" : "nav-link")}
-                >
-                  <FaCalendarAlt /> Guardería de día
-                </NavLink>
-              </Nav.Item>
-              <Nav.Item>
-                <NavLink
-                  to="/paseo-perros-leon"
-                  end
-                  onClick={handleNavClick}
-                  className={({ isActive }) => (isActive ? "active-link nav-link" : "nav-link")}
-                >
-                  <FaPaw /> Paseo de perros
-                </NavLink>
-              </Nav.Item>
-              <Nav.Item>
-                <NavLink
-                  to="/servicios-mascotas-leon"
-                  end
-                  onClick={handleNavClick}
-                  className={({ isActive }) => (isActive ? "active-link nav-link" : "nav-link")}
-                >
-                  <FaEllipsisH /> Otros servicios
-                </NavLink>
-              </Nav.Item>
-              <Nav.Item>
-                <NavLink
-                  to="/contacto-mascotas-leon"
-                  end
-                  onClick={handleNavClick}
-                  className={({ isActive }) => (isActive ? "active-link nav-link" : "nav-link")}
-                >
-                  <FaEnvelope /> Contacto
-                </NavLink>
-              </Nav.Item>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
+            ))}
+          </Nav>
+        </Navbar.Collapse>
+
       </Navbar>
       <div className="d-flex flex-column mt-3">
+
+
+        <Container className="mt-2 flex-grow-1">
+          <Routes>
+            {navLinks.map((link, index) => (
+              <Route key={index} path={link.path} element={<link.component />} />
+            ))}
+          </Routes>
+        </Container>
         <header className="container app-header">
           <h1>Tranquilopatitas: Cuidado de Mascotas en León</h1>
           <p>Tu solución de confianza para el bienestar y el cuidado de tus mascotas en León.</p>
         </header>
-
-        <Container className="mt-3 flex-grow-1">
-          <Routes>
-            <Route path="/" element={<QuienSoy />} />
-            <Route path="/alojamiento-mascotas-leon" element={<Alojamiento />} />
-            <Route path="/cuidado-domicilio-mascotas-leon" element={<CuidadoDomicilio />} />
-            <Route path="/visitas-domicilio-mascotas-leon" element={<VisitasDomicilio />} />
-            <Route path="/guarderia-dia-mascotas-leon" element={<GuarderiaDia />} />
-            <Route path="/paseo-perros-leon" element={<PaseoPerros />} />
-            <Route path="/servicios-mascotas-leon" element={<OtrosServicios />} />
-            <Route path="/contacto-mascotas-leon" element={<Contacto />} />
-          </Routes>
-        </Container>
 
         <footer className="container app-footer">
           <p>© 2025 Tranquilopatitas - Cuidado de Mascotas en León</p>
