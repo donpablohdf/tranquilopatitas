@@ -52,7 +52,7 @@ a{
 }
 
 /* Estilos del título principal (h1) en el banner */
-.banner-header .h1header {
+.banner-header h1 {
   font-size: 2rem;
   /* Tamaño de fuente inicial */
   white-space: nowrap;
@@ -226,6 +226,9 @@ h3 {
     font-size: 1.5rem;
     /* Tamaño de fuente más pequeño para pantallas muy pequeñas */
   }
+  .banner-header h1 {
+    font-size: 0.5rem;
+  }
 }
 
 /* Dispositivos móviles pequeños (portrait) */
@@ -233,6 +236,9 @@ h3 {
   .imagen-responsiva {
     max-width: 100%;
     /* Ancho completo en dispositivos muy pequeños */
+  }
+  .banner-header h1 {
+    font-size: 0.7rem;
   }
 
   /* No es necesario cambiar la dirección del flex aquí a menos que haya un diseño específico */
@@ -243,6 +249,9 @@ h3 {
   .imagen-responsiva {
     max-width: 100%;
     /* Ancho completo en dispositivos móviles */
+  }
+  .banner-header h1 {
+    font-size: 1.1rem;
   }
 
   /* No es necesario cambiar la dirección del flex aquí a menos que haya un diseño específico */
