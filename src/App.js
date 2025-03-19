@@ -301,14 +301,17 @@ function App() {
       <Navbar expand="lg" className="d-flex sticky-top custom-navbar" expanded={expanded} collapseOnSelect>
         <Container fluid> {/* Usamos Container fluid para ocupar todo el ancho */}
           <div className='d-flex align-items-center justify-content-between w-100'> {/* Contenedor para alinear logo, botón y collapse */}
-            <div className={`d-flex align-items-center justify-content-end ${expanded ? 'd-none' : ''}`}> {/* Contenedor para el logo */}
+            <div className={`d-flex align-items-center justify-content-end mr-5 ${expanded ? 'd-none' : ''}`}> {/* Contenedor para el logo */}
               <Logo color='#FFFFFF' />
+              
             </div>
+            <div className='ms-5'>
             <Navbar.Toggle
               aria-controls="basic-navbar-nav"
               onClick={() => setExpanded(!expanded)}
               className={`ms-auto ${expanded ? 'd-none' : ''}`} // Añadimos la clase d-none
             />
+            </div>
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
                 {navLinks.map((link, index) => (

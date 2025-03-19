@@ -107,7 +107,7 @@ h6 {
 .navbar-toggler {
   color: var(--white-color);
   background-color: var(--white-color);
-  margin-right: 1rem;
+  margin-left: 1rem;
 }
 
 /* Estilos del logo en la barra de navegación */
