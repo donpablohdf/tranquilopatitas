@@ -109,185 +109,199 @@ function App() {
     },
 
     {
-      path: '/veterinario-mascotas-leon', icon: <FaStethoscope />, title: 'Visitas al veterinario', subtitle: 'La salud de tu mascota en buenas manos', imageSrc: '/imgs/veterinario-mascotas-leon.webp', imageAlt: 'Veterinario en Leon', content: <>
-        <section>
-          <p>Ofrezco un servicio personalizado donde recojo a tu mascota en tu casa, la llevo al <strong>veterinario de tu elección en León</strong>, y después la devuelvo sana y salva a tu hogar. Tu tranquilidad y el bienestar de tu mascota son mi prioridad.</p>
+      path: '/veterinario-mascotas-leon', icon: <FaStethoscope />, title: 'Visitas al veterinario', subtitle: 'La salud de tu mascota en buenas manos', imageSrc: '/imgs/veterinario-mascotas-leon.webp', imageAlt: 'Veterinario en Leon', content:
+        <>
+          <article>
+            <p>Ofrezco un servicio personalizado donde recojo a tu mascota en tu casa, la llevo al <strong>veterinario de tu elección en León</strong>, y después la devuelvo sana y salva a tu hogar. Tu tranquilidad y el bienestar de tu mascota son mi prioridad.</p>
 
-          <p>Me aseguro de que cada paso del proceso sea lo más cómodo posible tanto para ti como para tu mascota. Desde el momento en que llego a tu puerta hasta el regreso, mantengo un ambiente tranquilo y seguro, brindando atención individualizada en todo momento. Además, estaré encantado de mantenerte informado durante cada etapa del trayecto, enviándote fotos o mensajes para que siempre sepas cómo está tu mascota.</p>
+            <p>Me aseguro de que cada paso del proceso sea lo más cómodo posible tanto para ti como para tu mascota. Desde el momento en que llego a tu puerta hasta el regreso, mantengo un ambiente tranquilo y seguro, brindando atención individualizada en todo momento. Además, estaré encantado de mantenerte informado durante cada etapa del trayecto, enviándote fotos o mensajes para que siempre sepas cómo está tu mascota.</p>
 
-          <p>¡Contáctame hoy mismo y deja que me encargue de todo!</p>
-        </section></>
+            <p>¡Contáctame hoy mismo y deja que me encargue de todo!</p>
+          </article>
+        </>
     },
 
     {
-      path: '/precios-mascotas-leon', icon: <FaDollarSign />, title: 'Tarifas', subtitle: 'Precios básicos', imageSrc: '/imgs/precios-mascotas-leon.webp', imageAlt: 'Precios mascotas León', content: <>
-        <section>
-          <p>Muchas variables pueden influir en los servicios que ofrezco, por eso a continuación se presentan las <strong>tarifas básicas</strong>. Lo que los precios pueden ajustarse según factores como la distancia, la duración o los servicios personalizados.</p>
-          
-          {/* Tarjetas de precios para dispositivos móviles */}
-          <div className="pricing-cards d-block d-lg-none">
-            <div className="row">
-              <div className="col-md-6 mb-3">
-                <div className="card h-100">
-                  <div className="card-body">
-                    <h5 className="card-title"><NavLink to="/alojamiento-mascotas-leon">Alojamiento 24h</NavLink></h5>
-                    <h6 className="card-subtitle mb-2 text-muted">Consultar</h6>
-                    <p className="card-text"><NavLink to="/contacto-mascotas-leon">Contáctame</NavLink> para precios por semanas, días o meses</p>
+      path: '/precios-mascotas-leon', icon: <FaDollarSign />, title: 'Tarifas', subtitle: 'Precios básicos', imageSrc: '/imgs/precios-mascotas-leon.webp', imageAlt: 'Precios mascotas León', content:
+        <>
+          <article>
+            <p>Muchas variables pueden influir en los servicios que ofrezco, por eso a continuación se presentan las <strong>tarifas básicas</strong>. Lo que los precios pueden ajustarse según factores como la distancia, la duración o los servicios personalizados.</p>
+
+            {/* Tarjetas de precios para dispositivos móviles */}
+            <div className="pricing-cards d-block d-lg-none">
+              <div className="row">
+                <div className="col-md-6 mb-3">
+                  <div className="card h-100">
+                    <div className="card-body">
+                      <h5 className="card-title"><NavLink to="/alojamiento-mascotas-leon">Alojamiento 24h</NavLink></h5>
+                      <h6 className="card-subtitle mb-2 text-muted">Consultar</h6>
+                      <p className="card-text"><NavLink to="/contacto-mascotas-leon">Contáctame</NavLink> para precios por semanas, días o meses</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              
-              <div className="col-md-6 mb-3">
-                <div className="card h-100">
-                  <div className="card-body">
-                    <h5 className="card-title"><NavLink to="/cuidado-domicilio-mascotas-leon">Cuidado Nocturno</NavLink></h5>
-                    <h6 className="card-subtitle mb-2 text-muted">30 €</h6>
-                    <p className="card-text">Por noche, <strong>en tu hogar</strong>.</p>
+
+                <div className="col-md-6 mb-3">
+                  <div className="card h-100">
+                    <div className="card-body">
+                      <h5 className="card-title"><NavLink to="/cuidado-domicilio-mascotas-leon">Cuidado Nocturno</NavLink></h5>
+                      <h6 className="card-subtitle mb-2 text-muted">30 €</h6>
+                      <p className="card-text">Por noche, <strong>en tu hogar</strong>.</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              
-              <div className="col-md-6 mb-3">
-                <div className="card h-100">
-                  <div className="card-body">
-                    <h5 className="card-title"><NavLink to="/visitas-domicilio-mascotas-leon">Visitas a domicilio</NavLink></h5>
-                    <h6 className="card-subtitle mb-2 text-muted">10 €</h6>
-                    <p className="card-text">Por visita</p>
+
+                <div className="col-md-6 mb-3">
+                  <div className="card h-100">
+                    <div className="card-body">
+                      <h5 className="card-title"><NavLink to="/visitas-domicilio-mascotas-leon">Visitas a domicilio</NavLink></h5>
+                      <h6 className="card-subtitle mb-2 text-muted">10 €</h6>
+                      <p className="card-text">Por visita</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              
-              <div className="col-md-6 mb-3">
-                <div className="card h-100">
-                  <div className="card-body">
-                    <h5 className="card-title"><NavLink to="/guarderia-dia-mascotas-leon">Guardería de día</NavLink></h5>
-                    <h6 className="card-subtitle mb-2 text-muted">50 €</h6>
-                    <p className="card-text"><strong>En mi hogar</strong>. Con paseos y actividades incluidas.</p>
+
+                <div className="col-md-6 mb-3">
+                  <div className="card h-100">
+                    <div className="card-body">
+                      <h5 className="card-title"><NavLink to="/guarderia-dia-mascotas-leon">Guardería de día</NavLink></h5>
+                      <h6 className="card-subtitle mb-2 text-muted">50 €</h6>
+                      <p className="card-text"><strong>En mi hogar</strong>. Con paseos y actividades incluidas.</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              
-              <div className="col-md-6 mb-3">
-                <div className="card h-100">
-                  <div className="card-body">
-                    <h5 className="card-title"><NavLink to="/paseo-perros-leon">Paseo de perros</NavLink></h5>
-                    <h6 className="card-subtitle mb-2 text-muted">10 € / hora</h6>
-                    <p className="card-text"><NavLink to="/contacto-mascotas-leon">Contáctame</NavLink> para precios por semanas o meses y cantidad de horas</p>
+
+                <div className="col-md-6 mb-3">
+                  <div className="card h-100">
+                    <div className="card-body">
+                      <h5 className="card-title"><NavLink to="/paseo-perros-leon">Paseo de perros</NavLink></h5>
+                      <h6 className="card-subtitle mb-2 text-muted">10 € / hora</h6>
+                      <p className="card-text"><NavLink to="/contacto-mascotas-leon">Contáctame</NavLink> para precios por semanas o meses y cantidad de horas</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              
-              <div className="col-md-6 mb-3">
-                <div className="card h-100">
-                  <div className="card-body">
-                    <h5 className="card-title"><NavLink to="/paseo-perros-leon">Paseos temáticos</NavLink></h5>
-                    <h6 className="card-subtitle mb-2 text-muted"><NavLink to="/contacto-mascotas-leon">Contáctame</NavLink></h6>
-                    <p className="card-text">Precios por actividad (playa, montaña, etc)</p>
+
+                <div className="col-md-6 mb-3">
+                  <div className="card h-100">
+                    <div className="card-body">
+                      <h5 className="card-title"><NavLink to="/paseo-perros-leon">Paseos temáticos</NavLink></h5>
+                      <h6 className="card-subtitle mb-2 text-muted"><NavLink to="/contacto-mascotas-leon">Contáctame</NavLink></h6>
+                      <p className="card-text">Precios por actividad (playa, montaña, etc)</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              
-              <div className="col-md-6 mb-3">
-                <div className="card h-100">
-                  <div className="card-body">
-                    <h5 className="card-title"><NavLink to="/comida-mascotas-leon">Comida a domicilio</NavLink></h5>
-                    <h6 className="card-subtitle mb-2 text-muted">Según menú</h6>
-                    <p className="card-text"><NavLink to="/contacto-mascotas-leon">Contáctame</NavLink> para ver condiciones</p>
+
+                <div className="col-md-6 mb-3">
+                  <div className="card h-100">
+                    <div className="card-body">
+                      <h5 className="card-title"><NavLink to="/comida-mascotas-leon">Comida a domicilio</NavLink></h5>
+                      <h6 className="card-subtitle mb-2 text-muted">Según menú</h6>
+                      <p className="card-text"><NavLink to="/contacto-mascotas-leon">Contáctame</NavLink> para ver condiciones</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              
-              <div className="col-md-6 mb-3">
-                <div className="card h-100">
-                  <div className="card-body">
-                    <h5 className="card-title"><NavLink to="/veterinario-mascotas-leon">Veterinario</NavLink></h5>
-                    <h6 className="card-subtitle mb-2 text-muted">15 €</h6>
-                    <p className="card-text">Recogida, traslado y entrega en tu hogar.</p>
+
+                <div className="col-md-6 mb-3">
+                  <div className="card h-100">
+                    <div className="card-body">
+                      <h5 className="card-title"><NavLink to="/veterinario-mascotas-leon">Veterinario</NavLink></h5>
+                      <h6 className="card-subtitle mb-2 text-muted">15 €</h6>
+                      <p className="card-text">Recogida, traslado y entrega en tu hogar.</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          
-          {/* Tabla tradicional para pantallas más grandes */}
-          <div className="d-none d-lg-block">
-            <div className="table-responsive">
-              <table className="pricing-table">
-                <thead>
-                  <tr>
-                    <th>Servicio</th>
-                    <th>Tarifa Básica</th>
-                    <th>Detalles</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><NavLink to="/alojamiento-mascotas-leon">Alojamiento 24h</NavLink></td>
-                    <td>Consultar</td>
-                    <td><NavLink to="/contacto-mascotas-leon">Contáctame</NavLink> para precios por semanas, días o meses</td>
-                  </tr>
-                  <tr>
-                    <td><NavLink to="/cuidado-domicilio-mascotas-leon">Cuidado Nocturno</NavLink></td>
-                    <td>30 €</td>
-                    <td>Por noche, <strong>en tu hogar</strong>.</td>
-                  </tr>
-                  <tr>
-                    <td><NavLink to="/visitas-domicilio-mascotas-leon">Visitas a domicilio</NavLink></td>
-                    <td>10 €</td>
-                    <td>Por visita</td>
-                  </tr>
-                  <tr>
-                    <td><NavLink to="/guarderia-dia-mascotas-leon">Guardería de día</NavLink></td>
-                    <td>50 €</td>
-                    <td><strong>En mi hogar</strong>. Con paseos y actividades incluidas.</td>
-                  </tr>
-                  <tr>
-                    <td><NavLink to="/paseo-perros-leon">Paseo de perros</NavLink></td>
-                    <td>10 € / hora</td>
-                    <td><NavLink to="/contacto-mascotas-leon">Contáctame</NavLink> para precios por semanas o meses y cantidad de horas</td>
-                  </tr>
-                  <tr>
-                    <td><NavLink to="/paseo-perros-leon">Paseos temáticos</NavLink></td>
-                    <td><NavLink to="/contacto-mascotas-leon">Contáctame</NavLink></td>
-                    <td>Precios por actividad (playa, montaña, etc)</td>
-                  </tr>
-                  <tr>
-                    <td><NavLink to="/comida-mascotas-leon">Comida a domicilio</NavLink></td>
-                    <td>Según menú</td>
-                    <td><NavLink to="/contacto-mascotas-leon">Contáctame</NavLink> para ver condiciones</td>
-                  </tr>
-                  <tr>
-                    <td><NavLink to="/veterinario-mascotas-leon">Veterinario</NavLink></td>
-                    <td>15 €</td>
-                    <td>Recogida, traslado y entrega en tu hogar.</td>
-                  </tr>
-                </tbody>
-              </table>
+
+            {/* Tabla tradicional para pantallas más grandes */}
+            <div className="d-none d-lg-block">
+              <div className="table-responsive">
+                <table className="pricing-table">
+                  <thead>
+                    <tr>
+                      <th>Servicio</th>
+                      <th>Tarifa Básica</th>
+                      <th>Detalles</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><NavLink to="/alojamiento-mascotas-leon">Alojamiento 24h</NavLink></td>
+                      <td>Consultar</td>
+                      <td><NavLink to="/contacto-mascotas-leon">Contáctame</NavLink> para precios por semanas, días o meses</td>
+                    </tr>
+                    <tr>
+                      <td><NavLink to="/cuidado-domicilio-mascotas-leon">Cuidado Nocturno</NavLink></td>
+                      <td>30 €</td>
+                      <td>Por noche, <strong>en tu hogar</strong>.</td>
+                    </tr>
+                    <tr>
+                      <td><NavLink to="/visitas-domicilio-mascotas-leon">Visitas a domicilio</NavLink></td>
+                      <td>10 €</td>
+                      <td>Por visita</td>
+                    </tr>
+                    <tr>
+                      <td><NavLink to="/guarderia-dia-mascotas-leon">Guardería de día</NavLink></td>
+                      <td>50 €</td>
+                      <td><strong>En mi hogar</strong>. Con paseos y actividades incluidas.</td>
+                    </tr>
+                    <tr>
+                      <td><NavLink to="/paseo-perros-leon">Paseo de perros</NavLink></td>
+                      <td>10 € / hora</td>
+                      <td><NavLink to="/contacto-mascotas-leon">Contáctame</NavLink> para precios por semanas o meses y cantidad de horas</td>
+                    </tr>
+                    <tr>
+                      <td><NavLink to="/paseo-perros-leon">Paseos temáticos</NavLink></td>
+                      <td><NavLink to="/contacto-mascotas-leon">Contáctame</NavLink></td>
+                      <td>Precios por actividad (playa, montaña, etc)</td>
+                    </tr>
+                    <tr>
+                      <td><NavLink to="/comida-mascotas-leon">Comida a domicilio</NavLink></td>
+                      <td>Según menú</td>
+                      <td><NavLink to="/contacto-mascotas-leon">Contáctame</NavLink> para ver condiciones</td>
+                    </tr>
+                    <tr>
+                      <td><NavLink to="/veterinario-mascotas-leon">Veterinario</NavLink></td>
+                      <td>15 €</td>
+                      <td>Recogida, traslado y entrega en tu hogar.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-          </div>
-          
-          <p className="note">*Las tarifas pueden variar según la ubicación, el número de mascotas o servicios adicionales. <NavLink to="/contacto-mascotas-leon">Contáctame</NavLink> para una cotización personalizada o servicio que necesites.</p>
-        </section>
-      </>
+
+            <p className="note">*Las tarifas pueden variar según la ubicación, el número de mascotas o servicios adicionales. <NavLink to="/contacto-mascotas-leon">Contáctame</NavLink> para una cotización personalizada o servicio que necesites.</p>
+          </article>
+        </>
     },
 
     {
-      path: '/contacto-mascotas-leon', icon: <FaEnvelope />, title: 'Contacto', subtitle: '¡a cualquier hora y con ideas nuevas!', imageSrc: '/imgs/ayuda-mascotas-leon.webp', imageAlt: 'Ayuda mascotas León', content: <>
-        <p>En <strong>TRANQUILOPATITAS</strong>, estoy disponible para ti <em>a cualquier hora del día</em>. Si necesitas ayuda con el cuidado de tu mascota, no dudes en contactarme cuando lo necesites. Además, si tienes alguna idea o servicio especial en mente, ¡no dudes en consultarme! Estoy aquí para ofrecerte soluciones personalizadas y asegurarme de que tu peludo amigo reciba siempre el mejor trato. 🐾</p>
-        <p>Email: <a href="tranquilopatitas@gmail.com">tranquilopatitas@gmail.com</a><br />Teléfono: <a href="tel:+34669810978">+34 669810978</a></p> </>
+      path: '/contacto-mascotas-leon', icon: <FaEnvelope />, title: 'Contacto', subtitle: '¡a cualquier hora y con ideas nuevas!', imageSrc: '/imgs/ayuda-mascotas-leon.webp', imageAlt: 'Ayuda mascotas León', content:
+        <>
+          <article>
+            <p>En <strong>TRANQUILOPATITAS</strong>, estoy disponible para ti <em>a cualquier hora del día</em>. Si necesitas ayuda con el cuidado de tu mascota, no dudes en contactarme cuando lo necesites. Además, si tienes alguna idea o servicio especial en mente, ¡no dudes en consultarme! Estoy aquí para ofrecerte soluciones personalizadas y asegurarme de que tu peludo amigo reciba siempre el mejor trato. 🐾</p>
+            <p>Email: <a href="mailto:tranquilopatitas@gmail.com">tranquilopatitas@gmail.com</a><br />Teléfono: <a href="tel:+34669810978">+34 669810978</a></p>
+          </article>
+        </>
     }
   ];
 
   return (
     <>
-      <header className="banner-header">
-        <div className="banner-content">
-          <h1>Tranquilopatitas: Cuidado de Mascotas en León</h1>
-          <p>Tu solución de confianza para el bienestar y el cuidado de tus mascotas en León.</p>
+      <header className="banner-header bg-success text-white py-2">
+        <div className="container-fluid px-4">
+          <div className="row align-items-center">
+            <div className="col-6 col-md-6 text-start ps-0">
+              <h1 className="fs-4 mb-0">Tranquilopatitas: Cuidado de Mascotas en León</h1>
+            </div>
+            <div className="col-6 col-md-6 text-end pe-0 d-none d-md-block">
+              <p className="mb-0">Tu solución de confianza para el bienestar y el cuidado de tus mascotas en León.</p>
+            </div>
+          </div>
         </div>
       </header>
+
       <Navbar expand="lg" className="sticky-top custom-navbar" expanded={expanded} collapseOnSelect>
-        <div className='d-flex ms-2'><Logo color='#FFFFFF' /></div>
+        <div className='d-flex ms-2 justify-content-end' ><Logo color='#FFFFFF' /></div>
         <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(!expanded)} className="ms-auto" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
