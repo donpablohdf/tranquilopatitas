@@ -1,7 +1,6 @@
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Route, NavLink, Routes } from 'react-router-dom';
+import { Route, NavLink, Routes, useLocation } from 'react-router-dom';
 import { FaHome, FaBed, FaDog, FaWalking, FaCalendarAlt, FaPaw, FaEnvelope, FaUtensils, FaStethoscope, FaDollarSign } from 'react-icons/fa';
 import Section from './components/Section';
 import Container from 'react-bootstrap/Container';
@@ -12,6 +11,14 @@ import Logo from './imgs/logo.js';
 
 function App() {
   const [expanded, setExpanded] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location) {
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
+
 
   const handleNavClick = () => {
     if (expanded) {
@@ -21,72 +28,84 @@ function App() {
 
   const navLinks = [
     {
-      path: '/', icon: <FaHome />, title: 'Quién soy', subtitle: 'Cuidado de mascotas en León', imageSrc: '/imgs/quien-soy-mascotas-leon.webp', imageAlt: 'Cuidado de mascotas en León', content: <>
-        <p>Hola soy Pablo, el fundador de <strong>TRANQUILOPATITAS</strong>, mi amor por las mascotas no solo es un interés personal, sino una verdadera vocación que me ha llevado a dedicar mi tiempo y energía a su bienestar. A través de estos servicios, busco crear un puente de confianza entre tú, tus peludos compañeros y yo, asegurándome de que siempre reciban la atención y el cariño que merecen.</p>
-
-        <p>Ya sea como compañeros incondicionales o como parte fundamental del hogar, las mascotas tienen un lugar especial en nuestros corazones. Por eso ofrezco servicios que combinan amor y compromiso para garantizar su felicidad y tranquilidad.</p>
-
-        <p>Mi enfoque se basa en brindar atención personalizada, adaptándome a sus rutinas, personalidades y requerimientos únicos. Además, valoro profundamente la relación de confianza que construyo con los dueños, sabiendo que me están confiando lo más importante: <strong>el bienestar de sus compañeros peludos.</strong></p></>
+      path: '/', icon: <FaHome />, title: 'Quién soy', subtitle: 'Cuidado de mascotas en León', imageSrc: '/imgs/quien-soy-mascotas-leon.webp', imageAlt: 'Cuidado de mascotas en León', content:
+        <>
+          <article>
+            <p>Hola soy Pablo, el fundador de <strong>TRANQUILOPATITAS</strong>, mi amor por las mascotas no solo es un interés personal, sino una verdadera vocación que me ha llevado a dedicar mi tiempo y energía a su bienestar. A través de estos servicios, busco crear un puente de confianza entre tú, tus peludos compañeros y yo, asegurándome de que siempre reciban la atención y el cariño que merecen.</p>
+            <p>Ya sea como compañeros incondicionales o como parte fundamental del hogar, las mascotas tienen un lugar especial en nuestros corazones. Por eso ofrezco servicios que combinan amor y compromiso para garantizar su felicidad y tranquilidad.</p>
+            <p>Mi enfoque se basa en brindar atención personalizada, adaptándome a sus rutinas, personalidades y requerimientos únicos. Además, valoro profundamente la relación de confianza que construyo con los dueños, sabiendo que me están confiando lo más importante: <strong>el bienestar de sus compañeros peludos.</strong></p>
+          </article>
+        </>
     },
 
     {
-      path: '/alojamiento-mascotas-leon', icon: <FaBed />, title: 'Alojamiento', subtitle: 'Cuidado de mascotas nocturno en mi casa', imageSrc: '/imgs/alojamiento-mascotas-leon.webp', imageAlt: 'Alojamiento mascotas Leon', content: <>
-        <p>Si necesitas irte de vacaciones o simplemente un día tienes algo que hacer y no puedes ocuparte de tu mascota, en mi hogar, me aseguro de que todas las necesidades de tus peludos amigos estén cubiertas, brindándoles un entorno seguro y actividades que los mantengan tranquilos y felices durante toda la noche.</p>
-
-        <p>Mi prioridad es que tus compañeros peludos disfruten de un espacio cómodo, con zonas dedicadas tanto para jugar <strong>(dispongo de un amplio patio privado y cerrado) </strong>como para descansar. Además, me aseguro de que sigan sus rutinas habituales de comida y cuidado, ofreciéndoles todo el cariño que necesitan. Sabemos lo importantes que son para ti, por eso te puedo enviar fotos y mensajes para que siempre estés al tanto de cómo están pasando la noche.</p>
-
-        <p>¡Espero conocerte pronto y formar parte de sus momentos especiales! 😊🐾</p></>
+      path: '/alojamiento-mascotas-leon', icon: <FaBed />, title: 'Alojamiento', subtitle: 'Cuidado de mascotas nocturno en mi casa', imageSrc: '/imgs/alojamiento-mascotas-leon.webp', imageAlt: 'Alojamiento mascotas Leon', content:
+        <>
+          <article>
+            <p>Si necesitas irte de vacaciones o simplemente un día tienes algo que hacer y no puedes ocuparte de tu mascota, en mi hogar, me aseguro de que todas las necesidades de tus peludos amigos estén cubiertas, brindándoles un entorno seguro y actividades que los mantengan tranquilos y felices durante toda la noche.</p>
+            <p>Mi prioridad es que tus compañeros peludos disfruten de un espacio cómodo, con zonas dedicadas tanto para jugar <strong>(dispongo de un amplio patio privado y cerrado) </strong>como para descansar. Además, me aseguro de que sigan sus rutinas habituales de comida y cuidado, ofreciéndoles todo el cariño que necesitan. Sabemos lo importantes que son para ti, por eso te puedo enviar fotos y mensajes para que siempre estés al tanto de cómo están pasando la noche.</p>
+            <p>¡Espero conocerte pronto y formar parte de sus momentos especiales! 😊🐾</p>
+          </article>
+        </>
     },
 
     {
-      path: '/cuidado-domicilio-mascotas-leon', icon: <FaDog />, title: 'Cuidado nocturno', subtitle: 'Cuidado de mascotas nocturno', imageSrc: '/imgs/visita-nocturna-mascotas-leon.webp', imageAlt: 'visita mascotas Leon', content: <>
-        <p>Ofrecemos un servicio de cuidado nocturno de mascotas <strong>en tu hopar</strong>. Sabemos lo importante que es para ti asegurarte de que tus amigos peludos estén seguros y felices mientras estás fuera, y estamos aquí para brindarte tranquilidad absoluta.</p>
-
-        <p>Entiendo que cada mascota es única, y por eso adapto mi enfoque según sus personalidades y requerimientos. También estaré en contacto contigo, enviándote actualizaciones y fotos para que puedas dormir tranquilo sabiendo que tus peludos están en buenas manos.</p>
-
-        <p><strong>Tu hogar</strong> y tus mascotas estarán en las mejores manos. Confía en nosotros para brindarles cariño, seguridad y rutinas nocturnas que se ajusten a sus necesidades.</p></>
+      path: '/cuidado-domicilio-mascotas-leon', icon: <FaDog />, title: 'Cuidado nocturno', subtitle: 'Cuidado de mascotas nocturno', imageSrc: '/imgs/visita-nocturna-mascotas-leon.webp', imageAlt: 'visita mascotas Leon', content:
+        <>
+          <article>
+            <p>Ofrecemos un servicio de cuidado nocturno de mascotas <strong>en tu hopar</strong>. Sabemos lo importante que es para ti asegurarte de que tus amigos peludos estén seguros y felices mientras estás fuera, y estamos aquí para brindarte tranquilidad absoluta.</p>
+            <p>Entiendo que cada mascota es única, y por eso adapto mi enfoque según sus personalidades y requerimientos. También estaré en contacto contigo, enviándote actualizaciones y fotos para que puedas dormir tranquilo sabiendo que tus peludos están en buenas manos.</p>
+            <p><strong>Tu hogar</strong> y tus mascotas estarán en las mejores manos. Confía en nosotros para brindarles cariño, seguridad y rutinas nocturnas que se ajusten a sus necesidades.</p>
+          </article>
+        </>
     },
 
     {
-      path: '/visitas-domicilio-mascotas-leon', icon: <FaWalking />, title: 'Visitas a domicilio', subtitle: 'Visitas a tu mascota en tu propio hogar', imageSrc: '/imgs/visitas-domicilio-mascotas-leon.webp', imageAlt: 'Visitas a domicilio mascotas Leon', content: <>
-        <p>Con nuestras visitas a domicilio garantizamos que tus mascotas reciban toda la atención y cuidado que necesitan mientras tú no estás en casa. Sabemos lo importante que es para ti asegurarte de que tus compañeros peludos estén felices, seguros y cómodos en su propio entorno.</p>
-
-        <p>Nos encargamos de todo lo necesario. Desde sacar a pasear a tu perro, asegurarnos de que tenga agua fresca y comida, hasta revisar que todo esté en orden en tu hogar. Nos adaptamos a las indicaciones específicas que nos proporciones, ya sea seguir una rutina estricta o atender necesidades especiales de tus peludos amigos.</p>
-
-        <p>También sabemos lo importante que es para ti estar al tanto de cómo están, por lo que te proporcionaremos actualizaciones después de cada visita, ya sea a través de mensajes, fotos o videos, para que puedas estar tranquilo sabiendo que están en buenas manos tus mascotas y tu propio hogar.</p></>
+      path: '/visitas-domicilio-mascotas-leon', icon: <FaWalking />, title: 'Visitas a domicilio', subtitle: 'Visitas a tu mascota en tu propio hogar', imageSrc: '/imgs/visitas-domicilio-mascotas-leon.webp', imageAlt: 'Visitas a domicilio mascotas Leon', content:
+        <>
+          <article>
+            <p>Con nuestras visitas a domicilio garantizamos que tus mascotas reciban toda la atención y cuidado que necesitan mientras tú no estás en casa. Sabemos lo importante que es para ti asegurarte de que tus compañeros peludos estén felices, seguros y cómodos en su propio entorno.</p>
+            <p>Nos encargamos de todo lo necesario. Desde sacar a pasear a tu perro, asegurarnos de que tenga agua fresca y comida, hasta revisar que todo esté en orden en tu hogar. Nos adaptamos a las indicaciones específicas que nos proporciones, ya sea seguir una rutina estricta o atender necesidades especiales de tus peludos amigos.</p>
+            <p>También sabemos lo importante que es para ti estar al tanto de cómo están, por lo que te proporcionaremos actualizaciones después de cada visita, ya sea a través de mensajes, fotos o videos, para que puedas estar tranquilo sabiendo que están en buenas manos tus mascotas y tu propio hogar.</p>
+          </article>
+        </>
     },
 
     {
       path: '/guarderia-dia-mascotas-leon', icon: <FaCalendarAlt />, title: 'Guardería de día', subtitle: 'Cuidado diurno en mi propio hogar', imageSrc: '/imgs/guarderia-de-dia-mascotas-leon.webp', imageAlt: 'Guardería de día mascotas Leon', content:
         <>
-          <p>Mi casa es un refugio pensado para brindar comodidad y diversión a las mascotas. Desde áreas amplias para correr y jugar <strong>(dispongo de un amplio patio privado y cerrado)</strong>, hasta rincones tranquilos para relajarse, cada detalle está cuidadosamente planificado para garantizar su bienestar. Aquí tu mascota tendrá una segunda familia que la recibirá con cariño.</p>
-
-          <p>Entendiendo que dejar a una mascota durante el día puede ser un momento delicado, por lo que mantendré comunicación constante contigo. A través de fotos y actualizaciones regulares, podrás ver lo bien que lo está pasando y relajarte sabiendo que está en buenas manos. El objetivo es que tanto tú como tu mascota os sintáis a gusto en el servicio, sabiendo que su felicidad es la mayor prioridad.</p>
+          <article>
+            <p>Mi casa es un refugio pensado para brindar comodidad y diversión a las mascotas. Desde áreas amplias para correr y jugar <strong>(dispongo de un amplio patio privado y cerrado)</strong>, hasta rincones tranquilos para relajarse, cada detalle está cuidadosamente planificado para garantizar su bienestar. Aquí tu mascota tendrá una segunda familia que la recibirá con cariño.</p>
+            <p>Entendiendo que dejar a una mascota durante el día puede ser un momento delicado, por lo que mantendré comunicación constante contigo. A través de fotos y actualizaciones regulares, podrás ver lo bien que lo está pasando y relajarte sabiendo que está en buenas manos. El objetivo es que tanto tú como tu mascota os sintáis a gusto en el servicio, sabiendo que su felicidad es la mayor prioridad.</p>
+          </article>
         </>
     },
 
     {
-      path: '/paseo-perros-leon', icon: <FaPaw />, title: 'Paseo de perros', subtitle: 'Cuidado de mascotas', imageSrc: '/imgs/paseo-perros-mascotas-leon.webp', imageAlt: 'Paseo de perros en Leon', content: <>
-        <p>En <strong>TRANQUILOPATITAS</strong>, ofrezco un servicio personalizado de paseo de perros en León. Sé lo importante que es para ti que tu perro reciba ejercicio, estimulación mental y momentos de diversión. Por eso, estoy aquí para ser el compañero de aventuras diarias de tu perro, brindándole caminatas seguras, saludables y llenas de energía.</p>
-
-        <p>Conozco los mejores lugares en León para disfrutar del aire fresco, desde parques arbolados hasta senderos tranquilos, donde tu perro podrá olfatear, correr y socializar en un entorno seguro y controlado.</p>
-
-        <h4 className="mb-2 text-muted">Paseos temáticos</h4>
-
-        <p>Descubre nuestros <strong>Paseos Temáticos</strong>, diseñados para ofrecer experiencias únicas y refrescantes a tu mascota. Ya sea un relajante paseo por la <em>playa</em>, una aventura en las <em>montañas</em>, o un día de exploración en un <em>parque</em> lejos de su ciudad, cada salida está pensada para que tu peludo amigo disfrute al máximo mientras se conecta con la naturaleza.</p></>
+      path: '/paseo-perros-leon', icon: <FaPaw />, title: 'Paseo de perros', subtitle: 'Cuidado de mascotas', imageSrc: '/imgs/paseo-perros-mascotas-leon.webp', imageAlt: 'Paseo de perros en Leon', content:
+        <>
+          <article>
+            <p>En <strong>TRANQUILOPATITAS</strong>, ofrezco un servicio personalizado de paseo de perros en León. Sé lo importante que es para ti que tu perro reciba ejercicio, estimulación mental y momentos de diversión. Por eso, estoy aquí para ser el compañero de aventuras diarias de tu perro, brindándole caminatas seguras, saludables y llenas de energía.</p>
+            <p>Conozco los mejores lugares en León para disfrutar del aire fresco, desde parques arbolados hasta senderos tranquilos, donde tu perro podrá olfatear, correr y socializar en un entorno seguro y controlado.</p>
+            <h4 className="mb-2 text-muted">Paseos temáticos</h4>
+            <p>Descubre nuestros <strong>Paseos Temáticos</strong>, diseñados para ofrecer experiencias únicas y refrescantes a tu mascota. Ya sea un relajante paseo por la <em>playa</em>, una aventura en las <em>montañas</em>, o un día de exploración en un <em>parque</em> lejos de su ciudad, cada salida está pensada para que tu peludo amigo disfrute al máximo mientras se conecta con la naturaleza.</p>
+          </article>
+        </>
     },
 
     {
-      path: '/comida-mascotas-leon', icon: <FaUtensils />, title: 'Comida a domicilio', subtitle: '¿Quieres consentir a tu mascota con comida casera y nutritiva?', imageSrc: '/imgs/comida-domicilio-mascotas-leon.webp', imageAlt: 'Comida mascotas Leon', content: <>
-        <p>En <strong>TRANQUILOPATITAS</strong>, preparamos recetas caseras y te las llevamos a casa para darle un capricho a tu mascota. Cada receta está diseñada para complementar la dieta de tu peludo y mantenerlo feliz y saludable.</p>
-
-        <p><strong>Ejemplos:</strong></p>
-        <ul>
-          <li><strong>Para perros:</strong> Pollo cocido desmenuzado + arroz integral + zanahoria rallada (¡sin cebolla ni ingredientes tóxicos!).</li>
-          <li><strong>Para gatos:</strong> Salmón al vapor + calabaza asada + un toque de hierbas aromáticas (siempre sin ajo ni cebolla).</li>
-        </ul>
-
-        <p>¿Necesitas una receta personalizada para las necesidades específicas de tu mascota? ¡Cuéntame más y juntos crearemos un menú ideal! 🐾</p> </>
+      path: '/comida-mascotas-leon', icon: <FaUtensils />, title: 'Comida a domicilio', subtitle: '¿Quieres consentir a tu mascota con comida casera y nutritiva?', imageSrc: '/imgs/comida-domicilio-mascotas-leon.webp', imageAlt: 'Comida mascotas Leon', content:
+        <>
+          <article>
+            <p>En <strong>TRANQUILOPATITAS</strong>, preparamos recetas caseras y te las llevamos a casa para darle un capricho a tu mascota. Cada receta está diseñada para complementar la dieta de tu peludo y mantenerlo feliz y saludable.</p>
+            <p><strong>Ejemplos:</strong></p>
+            <ul>
+              <li><strong>Para perros:</strong> Pollo cocido desmenuzado + arroz integral + zanahoria rallada (¡sin cebolla ni ingredientes tóxicos!).</li>
+              <li><strong>Para gatos:</strong> Salmón al vapor + calabaza asada + un toque de hierbas aromáticas (siempre sin ajo ni cebolla).</li>
+            </ul>
+            <p>¿Necesitas una receta personalizada para las necesidades específicas de tu mascota? ¡Cuéntame más y juntos crearemos un menú ideal! 🐾</p>
+          </article>
+        </>
     },
 
     {
@@ -105,7 +124,7 @@ function App() {
         <section>
           <p>Muchas variables pueden influir en los servicios que ofrezco, por eso a continuación se presentan las <strong>tarifas básicas</strong>. Lo que los precios pueden ajustarse según factores como la distancia, la duración o los servicios personalizados.</p>
           <div className="table-responsive">
-            <table class="pricing-table">
+            <table className="pricing-table">
               <thead>
                 <tr>
                   <th>Servicio</th>
@@ -158,8 +177,7 @@ function App() {
               </tbody>
             </table>
           </div>
-
-          <p class="note">*Las tarifas pueden variar según la ubicación, el número de mascotas o servicios adicionales. <NavLink to="/contacto-mascotas-leon">Contáctame</NavLink> para una cotización personalizada o servicio que necesites.</p>
+          <p className="note">*Las tarifas pueden variar según la ubicación, el número de mascotas o servicios adicionales. <NavLink to="/contacto-mascotas-leon">Contáctame</NavLink> para una cotización personalizada o servicio que necesites.</p>
         </section>
       </>
     },
@@ -172,7 +190,13 @@ function App() {
   ];
 
   return (
-    <Router>
+    <>
+      <header className="banner-header">
+        <div className="banner-content">
+          <h1>Tranquilopatitas: Cuidado de Mascotas en León</h1>
+          <p>Tu solución de confianza para el bienestar y el cuidado de tus mascotas en León.</p>
+        </div>
+      </header>
       <Navbar expand="lg" className="sticky-top custom-navbar" expanded={expanded} collapseOnSelect>
         <div className='ms-2'><Logo color='#FFFFFF' /></div>
         <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(!expanded)} />
@@ -201,15 +225,12 @@ function App() {
             ))}
           </Routes>
         </Container>
-        <header className="container app-header">
-          <h1>Tranquilopatitas: Cuidado de Mascotas en León</h1>
-          <p>Tu solución de confianza para el bienestar y el cuidado de tus mascotas en León.</p>
-        </header>
+
         <footer className="container app-footer">
           <p>© 2025 Tranquilopatitas - Cuidado de Mascotas en León</p>
         </footer>
       </div>
-    </Router>
+    </>
   );
 }
 

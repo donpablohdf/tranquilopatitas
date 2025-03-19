@@ -13,11 +13,7 @@ function Section({ title, subtitle, imageSrc, imageAlt, content }) {
             className="imagen-responsiva"
           />
           <Card.Body>
-            <h3>{title}</h3>
-            <h4 className="mb-2 text-muted">{subtitle}</h4>
-            <Card.Text>
-              {content}
-            </Card.Text>
+            <h3>{title}</h3><h4 className="mb-2 text-muted">{subtitle}</h4> {content}
           </Card.Body>
         </div>
       </Card>

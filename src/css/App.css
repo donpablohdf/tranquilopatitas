@@ -147,6 +147,53 @@ body {
   margin-top: 1rem; /* Espacio superior */
   text-align: left; 
 }
+.banner-header {
+  width: 100%;
+  height: 50px;
+  background-color: #4a9e5c; /* Color verde que combina con el tema de mascotas */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-content {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner-header h1 {
+  font-size: 16px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.banner-header p {
+  font-size: 12px;
+  margin: 0;
+  display: none; /* Oculto en pantallas pequeñas */
+}
+
+/* Media query para mostrar el texto completo en pantallas más grandes */
+@media (min-width: 768px) {
+  .banner-header p {
+    display: block;
+  }
+}
+
+/* Media query para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .banner-header h1 {
+    font-size: 14px;
+  }
+}
   
   /* Media query for small mobile devices (portrait) */
   @media (max-width: 320px) {
