@@ -287,30 +287,26 @@ function App() {
 
   return (
     <>
-      <header className="banner-header  py-2">
-        <div className="container-fluid px-4">
-          <div className="row">
-            <div className="col-12 text-start">
-              <h1 className="mb-2">Tranquilopatitas: Cuidado de Mascotas en León</h1>
-              <p className="mb-0">Tu solución de confianza para el bienestar y el cuidado de tus mascotas en León.</p>
-            </div>
-          </div>
-        </div>
-      </header>
+<header className="banner-header py-2">
+  <div className="d-flex flex-column justify-content-center align-items-left" >
+    <h1 className="mb-2">Tranquilopatitas: Cuidado de Mascotas en León</h1>
+    <p className="mb-0">Tu solución de confianza para el bienestar y el cuidado de tus mascotas en León.</p>
+  </div>
+</header>
 
       <Navbar expand="lg" className="d-flex sticky-top custom-navbar" expanded={expanded} collapseOnSelect>
         <Container fluid> {/* Usamos Container fluid para ocupar todo el ancho */}
           <div className='d-flex align-items-center justify-content-between w-100'> {/* Contenedor para alinear logo, botón y collapse */}
             <div className={`d-flex align-items-center justify-content-end mr-5 ${expanded ? 'd-none' : ''}`}> {/* Contenedor para el logo */}
               <Logo color='#FFFFFF' />
-              
+
             </div>
             <div className='ms-5'>
-            <Navbar.Toggle
-              aria-controls="basic-navbar-nav"
-              onClick={() => setExpanded(!expanded)}
-              className={`ms-auto ${expanded ? 'd-none' : ''}`} // Añadimos la clase d-none
-            />
+              <Navbar.Toggle
+                aria-controls="basic-navbar-nav"
+                onClick={() => setExpanded(!expanded)}
+                className={`ms-auto ${expanded ? 'd-none' : ''}`} // Añadimos la clase d-none
+              />
             </div>
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
