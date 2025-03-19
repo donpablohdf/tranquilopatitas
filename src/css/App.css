@@ -1,167 +1,201 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Merriweather:wght@300;700&display=swap');
 
-  
-  /* Paleta de colores */
-  :root {
-    --primary-color: #00796B;   /* Verde Esmeralda */
-    --secondary-color-1: #004D40;   /* Azul Oscuro */
-    --secondary-color-2: #80CBC4;   /* Verde Suave */
-    --neutral-color-light: #E0F2F1; /* Verde Claro */
-    --neutral-color-dark: #263238;  /* Gris Oscuro */
-    --white-color: #FFFFFF;        /* Blanco */
+
+/* Paleta de colores */
+:root {
+  --primary-color: #00796B;
+  /* Verde Esmeralda */
+  --secondary-color-1: #004D40;
+  /* Azul Oscuro */
+  --secondary-color-2: #80CBC4;
+  /* Verde Suave */
+  --neutral-color-light: #E0F2F1;
+  /* Verde Claro */
+  --neutral-color-dark: #263238;
+  /* Gris Oscuro */
+  --white-color: #FFFFFF;
+  /* Blanco */
 }
 
 body {
-    background-color: var(--neutral-color-light);
-    color: var(--neutral-color-dark);
-    font-family: 'Poppins', sans-serif;
-    font-size: 15px; /* Tamaño base */
+  background-color: var(--neutral-color-light);
+  color: var(--neutral-color-dark);
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  /* Tamaño base */
 }
+
 /* Estilos de encabezados */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Merriweather', serif;
 }
-.principal{
+
+.principal {
   width: 100%;
 }
 
 /* App.css */
 .app-header {
-    background-color: var(--secondary-color-1);
-    padding: 20px;
-    text-align: center;
+  background-color: var(--secondary-color-1);
+  padding: 20px;
+  text-align: center;
 }
 
 .app-footer {
-    background-color: var(--neutral-color-light);
-    padding: 10px;
-    text-align: center;
-    font-size: 0.8em;
+  background-color: var(--neutral-color-light);
+  padding: 10px;
+  text-align: center;
+  font-size: 0.8em;
 }
 
 .custom-navbar {
   width: 100%;
-    background-color: var(--secondary-color-1);
-    color: var(--white-color) !important;
-    font-family: 'Poppins', sans-serif;
+  background-color: var(--secondary-color-1);
+  color: var(--white-color) !important;
+  font-family: 'Poppins', sans-serif;
 }
 
 .custom-navbar .nav-link {
-    color: var(--white-color) !important;
-    transition: all 0.3s ease;
-    margin: 0 5px;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    white-space: nowrap;
+  color: var(--white-color) !important;
+  transition: all 0.3s ease;
+  margin: 0 5px;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  white-space: nowrap;
 }
 
 .custom-navbar .nav-link:hover {
-    background-color: var(--secondary-color-2);
+  background-color: var(--secondary-color-2);
 }
 
 .active-link {
   background-color: var(--secondary-color-2);
 }
-
+ 
+.navbar-toggler{
+  color: var(--white-color);
+  background-color: var(--white-color);
+  margin-right: 1rem;
+}
 
 .navbar-brand-custom {
-    flex: 0 0 auto;
-    margin-right: 1rem;
+  flex: 0 0 auto;
+  margin-right: 1rem;
 }
 
-/*  Ejemplo para botones */
-.btn-primary {
-    background-color: var(--secondary-color-1);
-    border-color: var(--secondary-color-1);
-    color: var(--neutral-color-dark);
-}
 
-.btn-primary:hover {
-    background-color: darken(var(--secondary-color-1), 10%);
-    border-color: darken(var(--secondary-color-1), 10%);
-}
-
-/* Ejemplo para tarjetas */
+/* Tarjetas */
 .card {
-    background-color: var(--white-color);
-    border: 1px solid var(--neutral-color-light);
-    font-family: 'Poppins', sans-serif;
+  background-color: var(--white-color);
+  border: 1px solid var(--neutral-color-light);
+  font-family: 'Poppins', sans-serif;
 }
 
-.card h2, h3 {
-    color: var(--neutral-color-dark);
+.card h2,
+h3 {
+  color: var(--neutral-color-dark);
 }
+
 .imagen-responsiva {
-    width: 100%;
-    height: 100%;
-    max-width: 300px; /* Default max-width for larger screens */
-    object-fit: cover;
-  }
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  /* Default max-width for larger screens */
+  object-fit: cover;
+}
 
-  .table-responsive {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  
-  /* Estilo general para la tabla de precios */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Estilo general para la tabla de precios */
 .pricing-table {
   width: 100%;
-  max-width: 800px; /* Limita el ancho máximo para pantallas grandes */
-  margin: 2rem auto; /* Centra la tabla y añade margen superior e inferior */
-  border-collapse: collapse; /* Elimina los espacios entre las celdas */
+  max-width: 800px;
+  /* Limita el ancho máximo para pantallas grandes */
+  margin: 2rem auto;
+  /* Centra la tabla y añade margen superior e inferior */
+  border-collapse: collapse;
+  /* Elimina los espacios entre las celdas */
   font-family: Arial, sans-serif;
-  border: 1px solid #ddd; /* Borde exterior suave */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera para destacar */
-  background-color: #fff; /* Fondo blanco para contraste */
+  border: 1px solid #ddd;
+  /* Borde exterior suave */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Sombra ligera para destacar */
+  background-color: #fff;
+  /* Fondo blanco para contraste */
 }
 
 /* Estilo para las cabeceras (thead) */
 .pricing-table thead {
-  background-color: #f7f7f7; /* Color de fondo claro para las cabeceras */
+  background-color: #f7f7f7;
+  /* Color de fondo claro para las cabeceras */
 }
 
 .pricing-table th {
-  padding: 1rem; /* Espaciado interno en las cabeceras */
-  text-align: left; /* Alineación del texto */
-  font-weight: bold; /* Texto en negrita */
-  color: #333; /* Color de texto oscuro */
-  border-bottom: 2px solid #ccc; /* Línea divisoria debajo de las cabeceras */
+  padding: 1rem;
+  /* Espaciado interno en las cabeceras */
+  text-align: left;
+  /* Alineación del texto */
+  font-weight: bold;
+  /* Texto en negrita */
+  color: #333;
+  /* Color de texto oscuro */
+  border-bottom: 2px solid #ccc;
+  /* Línea divisoria debajo de las cabeceras */
 }
 
 /* Estilo para las filas del cuerpo (tbody) */
 .pricing-table tbody tr {
-  border-bottom: 1px solid #eee; /* Línea divisoria entre filas */
+  border-bottom: 1px solid #eee;
+  /* Línea divisoria entre filas */
 }
 
 .pricing-table tbody td {
-  padding: 1rem; /* Espaciado interno en las celdas */
-  vertical-align: middle; /* Alinea el contenido verticalmente */
-  color: #555; /* Color de texto más suave */
+  padding: 1rem;
+  /* Espaciado interno en las celdas */
+  vertical-align: middle;
+  /* Alinea el contenido verticalmente */
+  color: #555;
+  /* Color de texto más suave */
 }
 
 /* Alternancia de colores en las filas para mejor lectura */
 .pricing-table tbody tr:nth-child(even) {
-  background-color: #f9f9f9; /* Fondo claro para filas pares */
+  background-color: #f9f9f9;
+  /* Fondo claro para filas pares */
 }
 
 /* Resaltado al pasar el ratón sobre una fila */
 .pricing-table tbody tr:hover {
-  background-color: #f1f1f1; /* Cambia el fondo al pasar el cursor */
-  transition: background-color 0.3s ease; /* Transición suave */
+  background-color: #f1f1f1;
+  /* Cambia el fondo al pasar el cursor */
+  transition: background-color 0.3s ease;
+  /* Transición suave */
 }
 
 /* Estilo para la nota final */
 .note {
-  font-size: 0.9rem; /* Tamaño de fuente más pequeño */
-  color: #777; /* Color de texto más tenue */
-  margin-top: 1rem; /* Espacio superior */
-  text-align: left; 
+  font-size: 0.9rem;
+  /* Tamaño de fuente más pequeño */
+  color: #777;
+  /* Color de texto más tenue */
+  margin-top: 1rem;
+  /* Espacio superior */
+  text-align: left;
 }
+
 .banner-header {
   width: 100%;
   height: 50px;
-  background-color: #4a9e5c; /* Color verde que combina con el tema de mascotas */
+  background-color: #4a9e5c;
+  /* Color verde que combina con el tema de mascotas */
   color: white;
   display: flex;
   align-items: center;
@@ -189,7 +223,8 @@ h1, h2, h3, h4, h5, h6 {
 .banner-header p {
   font-size: 12px;
   margin: 0;
-  display: none; /* Oculto en pantallas pequeñas */
+  display: none;
+  /* Oculto en pantallas pequeñas */
 }
 
 /* Media query para mostrar el texto completo en pantallas más grandes */
@@ -205,58 +240,68 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 14px;
   }
 }
-  
-  /* Media query for small mobile devices (portrait) */
-  @media (max-width: 320px) {
-    .imagen-responsiva {
-      max-width: 100%; /* Full width on very small mobile devices */
-    }
-  
-    .d-flex {
-      flex-direction: column; /* Stack the layout on very small mobile devices */
-    }
+
+/* Media query for small mobile devices (portrait) */
+@media (max-width: 320px) {
+  .imagen-responsiva {
+    max-width: 100%;
+    /* Full width on very small mobile devices */
   }
-  
-  /* Media query for mobile devices */
-  @media (min-width: 321px) and (max-width: 599px) {
-    .imagen-responsiva {
-      max-width: 100%; /* Full width on mobile devices */
-    }
-  
-    .d-flex {
-      flex-direction: column; /* Stack the layout on mobile devices */
-    }
+
+  .d-flex {
+    flex-direction: column;
+    /* Stack the layout on very small mobile devices */
   }
-  
-  /* Media query for tablets */
-  @media (min-width: 600px) and (max-width: 899px) {
-    .imagen-responsiva {
-      max-width: 50%; /* Allow the image to take up half the width on tablets */
-    }
-  
-    .d-flex {
-      flex-direction: row; /* Ensure the layout is side by side on tablets */
-    }
+}
+
+/* Media query for mobile devices */
+@media (min-width: 321px) and (max-width: 599px) {
+  .imagen-responsiva {
+    max-width: 100%;
+    /* Full width on mobile devices */
   }
-  
-  /* Media query for small laptops */
-  @media (min-width: 900px) and (max-width: 1199px) {
-    .imagen-responsiva {
-      max-width: 40%; /* Adjust the image width for small laptops */
-    }
-  
-    .d-flex {
-      flex-direction: row; /* Side by side layout on small laptops */
-    }
+
+  .d-flex {
+    flex-direction: column;
+    /* Stack the layout on mobile devices */
   }
-  
-  /* Media query for large laptops and desktops */
-  @media (min-width: 1200px) {
-    .imagen-responsiva {
-      max-width: 30%; /* Adjust the image width for large laptops and desktops */
-    }
-  
-    .d-flex {
-      flex-direction: row; /* Side by side layout on large laptops and desktops */
-    }
+}
+
+/* Media query for tablets */
+@media (min-width: 600px) and (max-width: 899px) {
+  .imagen-responsiva {
+    max-width: 50%;
+    /* Allow the image to take up half the width on tablets */
   }
+
+  .d-flex {
+    flex-direction: row;
+    /* Ensure the layout is side by side on tablets */
+  }
+}
+
+/* Media query for small laptops */
+@media (min-width: 900px) and (max-width: 1199px) {
+  .imagen-responsiva {
+    max-width: 40%;
+    /* Adjust the image width for small laptops */
+  }
+
+  .d-flex {
+    flex-direction: row;
+    /* Side by side layout on small laptops */
+  }
+}
+
+/* Media query for large laptops and desktops */
+@media (min-width: 1200px) {
+  .imagen-responsiva {
+    max-width: 30%;
+    /* Adjust the image width for large laptops and desktops */
+  }
+
+  .d-flex {
+    flex-direction: row;
+    /* Side by side layout on large laptops and desktops */
+  }
+}

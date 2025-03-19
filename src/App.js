@@ -198,7 +198,7 @@ function App() {
         </div>
       </header>
       <Navbar expand="lg" className="sticky-top custom-navbar" expanded={expanded} collapseOnSelect>
-        <div className='ms-2'><Logo color='#FFFFFF' /></div>
+        <div className='d-flex justify-content-end ms-2'><Logo color='#FFFFFF' /></div>
         <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(!expanded)} />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
