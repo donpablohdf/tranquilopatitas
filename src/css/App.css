@@ -88,7 +88,7 @@ a{
   background-color: var(--navbar-background-color);
   color: var(--white-color) !important;
   font-family: 'Poppins', sans-serif;
-  width: 100%;
+  width: 100%; /* Asegura el ancho completo */ 
 }
 
 /* Estilos de los enlaces en la barra de navegación */
@@ -222,7 +222,7 @@ h3 {
     /* Ancho completo en dispositivos móviles */
   }
   .banner-header h1 {
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     text-align: center;
   }
   .banner-header p {    
