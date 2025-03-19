@@ -39,6 +39,9 @@ h5,
 h6 {
   font-family: 'Merriweather', serif;
 }
+a{
+  color: var(--navbar-background-color);
+}
 
 /* Estilos del header del banner */
 .banner-header {
