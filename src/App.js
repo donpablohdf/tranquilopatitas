@@ -301,7 +301,7 @@ function App() {
       <Navbar expand="lg" className="d-flex sticky-top custom-navbar" expanded={expanded} collapseOnSelect>
         <Container fluid> {/* Usamos Container fluid para ocupar todo el ancho */}
           <div className='d-flex align-items-center justify-content-between w-100'> {/* Contenedor para alinear logo, botón y collapse */}
-            <div className={`d-flex align-items-center ${expanded ? 'd-none' : ''}`}> {/* Contenedor para el logo */}
+            <div className={`d-flex align-items-center justify-content-end ${expanded ? 'd-none' : ''}`}> {/* Contenedor para el logo */}
               <Logo color='#FFFFFF' />
             </div>
             <Navbar.Toggle
