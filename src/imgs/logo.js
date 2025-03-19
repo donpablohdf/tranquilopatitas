@@ -5,8 +5,7 @@ const TranquilopatitasLogo = ({ color = '#ffffff' }) => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="60%"
-      height="60%"
-      align='right'
+      height="60%"      
       viewBox="0 0 136.83085 23.428682"
       version="1.1"
       id="svg1"

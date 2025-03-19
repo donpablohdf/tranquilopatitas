@@ -287,38 +287,46 @@ function App() {
 
   return (
     <>
-      <header className="banner-header bg-success text-white py-2">
+      <header className="banner-header  py-2">
         <div className="container-fluid px-4">
-          <div className="row align-items-center">
-            <div className="col-6 col-md-6 text-start ps-0">
-              <h1 className="fs-4 mb-0">Tranquilopatitas: Cuidado de Mascotas en León</h1>
-            </div>
-            <div className="col-6 col-md-6 text-end pe-0 d-none d-md-block">
+          <div className="row">
+            <div className="col-12 text-start">
+              <h1 className="mb-2">Tranquilopatitas: Cuidado de Mascotas en León</h1>
               <p className="mb-0">Tu solución de confianza para el bienestar y el cuidado de tus mascotas en León.</p>
             </div>
           </div>
         </div>
       </header>
 
-      <Navbar expand="lg" className="sticky-top custom-navbar" expanded={expanded} collapseOnSelect>
-        <div className='d-flex ms-2 justify-content-end' ><Logo color='#FFFFFF' /></div>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(!expanded)} className="ms-auto" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            {navLinks.map((link, index) => (
-              <Nav.Item key={index}>
-                <NavLink
-                  to={link.path}
-                  end
-                  onClick={handleNavClick}
-                  className={({ isActive }) => (isActive ? "active-link nav-link" : "nav-link")}
-                >
-                  {link.icon} {link.title}
-                </NavLink>
-              </Nav.Item>
-            ))}
-          </Nav>
-        </Navbar.Collapse>
+      <Navbar expand="lg" className="d-flex sticky-top custom-navbar" expanded={expanded} collapseOnSelect>
+        <Container fluid> {/* Usamos Container fluid para ocupar todo el ancho */}
+          <div className='d-flex align-items-center justify-content-between w-100'> {/* Contenedor para alinear logo, botón y collapse */}
+            <div className={`d-flex align-items-center ${expanded ? 'd-none' : ''}`}> {/* Contenedor para el logo */}
+              <Logo color='#FFFFFF' />
+            </div>
+            <Navbar.Toggle
+              aria-controls="basic-navbar-nav"
+              onClick={() => setExpanded(!expanded)}
+              className={`ms-auto ${expanded ? 'd-none' : ''}`} // Añadimos la clase d-none
+            />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="me-auto">
+                {navLinks.map((link, index) => (
+                  <Nav.Item key={index}>
+                    <NavLink
+                      to={link.path}
+                      end
+                      onClick={handleNavClick}
+                      className={({ isActive }) => (isActive ? "active-link nav-link" : "nav-link")}
+                    >
+                      {link.icon} {link.title}
+                    </NavLink>
+                  </Nav.Item>
+                ))}
+              </Nav>
+            </Navbar.Collapse>
+          </div>
+        </Container>
       </Navbar>
       <div className="d-flex flex-column mt-3">
         <Container className="mt-2 flex-grow-1">

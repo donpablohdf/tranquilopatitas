@@ -1,30 +1,33 @@
+/* Importación de fuentes de Google */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Merriweather:wght@300;700&display=swap');
-
 
 /* Paleta de colores */
 :root {
-  --primary-color: #00796B;
-  /* Verde Esmeralda */
-  --secondary-color-1: #004D40;
-  /* Azul Oscuro */
-  --secondary-color-2: #80CBC4;
-  /* Verde Suave */
-  --neutral-color-light: #E0F2F1;
-  /* Verde Claro */
-  --neutral-color-dark: #263238;
-  /* Gris Oscuro */
+  --brand-color: #00796B;
+  /* Verde Esmeralda (color principal de la marca) */
+  --navbar-background-color: #004D40;
+  /* Azul Oscuro (fondo de la barra de navegación) */
+  --link-hover-color: #80CBC4;
+  /* Verde Suave (color de los enlaces al pasar el ratón) */
+  --background-color-light: #E0F2F1;
+  /* Verde Claro (fondo general de la página) */
+  --text-color-dark: #263238;
+  /* Gris Oscuro (color del texto principal) */
   --white-color: #FFFFFF;
-  /* Blanco */
-  --fondo-banner: #4a9e5c;
-  --txt-notas: #777;;
+  /* Blanco (color de fondo de las tarjetas, texto en la barra de navegación) */
+  --banner-background-color: #4a9e5c;
+  /* Verde para el fondo del banner */
+  --note-text-color: #777;
+  /* Color para las notas */
 }
 
+/* Estilos generales del body */
 body {
-  background-color: var(--neutral-color-light);
-  color: var(--neutral-color-dark);
+  background-color: var(--background-color-light);
+  color: var(--text-color-dark);
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
-  /* Tamaño base */
+  /* Tamaño base de la fuente */
 }
 
 /* Estilos de encabezados */
@@ -37,27 +40,49 @@ h6 {
   font-family: 'Merriweather', serif;
 }
 
-/* App.css */
-.app-header {
-  background-color: var(--secondary-color-1);
-  padding: 20px;
-  text-align: center;
+/* Estilos del header del banner */
+.banner-header {
+  background-color: var(--banner-background-color);
+  color: var(--white-color);
+  padding: 1rem;
+  text-align: left;
 }
 
+/* Estilos del título principal (h1) en el banner */
+.banner-header .h1header {
+  font-size: 2rem;
+  /* Tamaño de fuente inicial */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+/* Estilos del párrafo en el banner */
+.banner-header p {
+  font-size: 1rem;
+  margin: 0;
+  display: none;
+  /* Oculto en pantallas pequeñas */
+}
+
+/* Estilos del footer */
 .app-footer {
-  background-color: var(--neutral-color-light);
+  background-color: var(--background-color-light);
   padding: 10px;
   text-align: center;
   font-size: 0.8em;
 }
 
+/* Estilos de la barra de navegación */
 .custom-navbar {
-  width: 100%;
-  background-color: var(--secondary-color-1);
+  background-color: var(--navbar-background-color);
   color: var(--white-color) !important;
   font-family: 'Poppins', sans-serif;
 }
 
+/* Estilos de los enlaces en la barra de navegación */
 .custom-navbar .nav-link {
   color: var(--white-color) !important;
   transition: all 0.3s ease;
@@ -67,38 +92,44 @@ h6 {
   white-space: nowrap;
 }
 
+/* Estilos de los enlaces al pasar el ratón */
 .custom-navbar .nav-link:hover {
-  background-color: var(--secondary-color-2);
+  background-color: var(--link-hover-color);
 }
 
+
+/* Estilos del enlace activo */
 .active-link {
-  background-color: var(--secondary-color-2);
+  background-color: var(--link-hover-color);
 }
 
+/* Estilos del botón de alternancia (toggler) */
 .navbar-toggler {
   color: var(--white-color);
   background-color: var(--white-color);
   margin-right: 1rem;
 }
 
+/* Estilos del logo en la barra de navegación */
 .navbar-brand-custom {
   flex: 0 0 auto;
   margin-right: 1rem;
 }
 
-
-/* Tarjetas */
+/* Estilos de las tarjetas */
 .card {
   background-color: var(--white-color);
-  border: 1px solid var(--neutral-color-light);
+  border: 1px solid var(--background-color-light);
   font-family: 'Poppins', sans-serif;
 }
 
+/* Estilos de los títulos dentro de las tarjetas */
 .card h2,
 h3 {
-  color: var(--neutral-color-dark);
+  color: var(--text-color-dark);
 }
 
+/* Estilos de las imágenes responsivas */
 .imagen-responsiva {
   width: 100%;
   height: 100%;
@@ -107,6 +138,7 @@ h3 {
   object-fit: cover;
 }
 
+/* Estilos para la tabla responsiva */
 .table-responsive {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -166,100 +198,79 @@ h3 {
 .note {
   font-size: 0.9rem;
   /* Tamaño de fuente más pequeño */
-  color: var(--txt-notas);
+  color: var(--note-text-color);
   /* Color de texto más tenue */
   margin-top: 1rem;
   /* Espacio superior */
   text-align: left;
 }
 
-.banner-header h1 {
-  font-size: 12px;
-  
-}
+/* Media queries */
 
-.banner-header p {
-  font-size: 8px;
-  margin: 0;
-  display: none;
-  /* Oculto en pantallas pequeñas */
-}
-
-/* Media query para mostrar el texto completo en pantallas más grandes */
+/* Pantallas más grandes (>= 768px) */
 @media (min-width: 768px) {
   .banner-header p {
     display: block;
+    /* Mostrar el párrafo en pantallas más grandes */
+    font-size: 1.2rem;
+    /* Tamaño de fuente para pantallas más grandes */
   }
 }
 
-/* Media query para pantallas muy pequeñas */
+/* Pantallas muy pequeñas (<= 480px) */
 @media (max-width: 480px) {
-  .banner-header h1 {
-    font-size: 14px;
+  .banner-header .h1header {
+    font-size: 1.5rem;
+    /* Tamaño de fuente más pequeño para pantallas muy pequeñas */
   }
 }
 
-/* Media query for small mobile devices (portrait) */
+/* Dispositivos móviles pequeños (portrait) */
 @media (max-width: 320px) {
   .imagen-responsiva {
     max-width: 100%;
-    /* Full width on very small mobile devices */
+    /* Ancho completo en dispositivos muy pequeños */
   }
 
-  .d-flex {
-    flex-direction: column;
-    /* Stack the layout on very small mobile devices */
-  }
+  /* No es necesario cambiar la dirección del flex aquí a menos que haya un diseño específico */
 }
 
-/* Media query for mobile devices */
+/* Dispositivos móviles */
 @media (min-width: 321px) and (max-width: 599px) {
   .imagen-responsiva {
     max-width: 100%;
-    /* Full width on mobile devices */
+    /* Ancho completo en dispositivos móviles */
   }
 
-  .d-flex {
-    flex-direction: column;
-    /* Stack the layout on mobile devices */
-  }
+  /* No es necesario cambiar la dirección del flex aquí a menos que haya un diseño específico */
 }
 
-/* Media query for tablets */
+/* Tablets */
 @media (min-width: 600px) and (max-width: 899px) {
   .imagen-responsiva {
     max-width: 50%;
-    /* Allow the image to take up half the width on tablets */
+    /* Mitad del ancho en tablets */
   }
 
-  .d-flex {
-    flex-direction: row;
-    /* Ensure the layout is side by side on tablets */
-  }
+  /* No es necesario cambiar la dirección del flex aquí a menos que haya un diseño específico */
 }
 
-/* Media query for small laptops */
+/* Laptops pequeñas */
 @media (min-width: 900px) and (max-width: 1199px) {
   .imagen-responsiva {
     max-width: 40%;
-    /* Adjust the image width for small laptops */
+    /* 40% del ancho en laptops pequeñas */
   }
 
-  .d-flex {
-    flex-direction: row;
-    /* Side by side layout on small laptops */
-  }
+  /* No es necesario cambiar la dirección del flex aquí a menos que haya un diseño específico */
 }
 
-/* Media query for large laptops and desktops */
+/* Laptops grandes y escritorios */
 @media (min-width: 1200px) {
   .imagen-responsiva {
     max-width: 30%;
-    /* Adjust the image width for large laptops and desktops */
+    /* 30% del ancho en laptops grandes y escritorios */
   }
 
-  .d-flex {
-    flex-direction: row;
-    /* Side by side layout on large laptops and desktops */
-  }
+  /* No es necesario cambiar la dirección del flex aquí a menos que haya un diseño específico */
 }
