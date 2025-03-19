@@ -87,6 +87,61 @@ body {
     max-width: 300px; /* Default max-width for larger screens */
     object-fit: cover;
   }
+
+  /* Estilo general para la tabla de precios */
+.pricing-table {
+  width: 100%;
+  max-width: 800px; /* Limita el ancho máximo para pantallas grandes */
+  margin: 2rem auto; /* Centra la tabla y añade margen superior e inferior */
+  border-collapse: collapse; /* Elimina los espacios entre las celdas */
+  font-family: Arial, sans-serif;
+  border: 1px solid #ddd; /* Borde exterior suave */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera para destacar */
+  background-color: #fff; /* Fondo blanco para contraste */
+}
+
+/* Estilo para las cabeceras (thead) */
+.pricing-table thead {
+  background-color: #f7f7f7; /* Color de fondo claro para las cabeceras */
+}
+
+.pricing-table th {
+  padding: 1rem; /* Espaciado interno en las cabeceras */
+  text-align: left; /* Alineación del texto */
+  font-weight: bold; /* Texto en negrita */
+  color: #333; /* Color de texto oscuro */
+  border-bottom: 2px solid #ccc; /* Línea divisoria debajo de las cabeceras */
+}
+
+/* Estilo para las filas del cuerpo (tbody) */
+.pricing-table tbody tr {
+  border-bottom: 1px solid #eee; /* Línea divisoria entre filas */
+}
+
+.pricing-table tbody td {
+  padding: 1rem; /* Espaciado interno en las celdas */
+  vertical-align: middle; /* Alinea el contenido verticalmente */
+  color: #555; /* Color de texto más suave */
+}
+
+/* Alternancia de colores en las filas para mejor lectura */
+.pricing-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Fondo claro para filas pares */
+}
+
+/* Resaltado al pasar el ratón sobre una fila */
+.pricing-table tbody tr:hover {
+  background-color: #f1f1f1; /* Cambia el fondo al pasar el cursor */
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Estilo para la nota final */
+.note {
+  font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+  color: #777; /* Color de texto más tenue */
+  margin-top: 1rem; /* Espacio superior */
+  text-align: center; /* Centra el texto */
+}
   
   /* Media query for small mobile devices (portrait) */
   @media (max-width: 320px) {
