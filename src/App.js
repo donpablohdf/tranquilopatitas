@@ -104,7 +104,7 @@ function App() {
       path: '/precios-mascotas-leon', icon: <FaDollarSign />, title: 'Tarifas', subtitle: 'Precios básicos', imageSrc: '/imgs/precios-mascotas-leon.webp', imageAlt: 'Precios mascotas León', content: <>
         <section>          
           <p>Muchas variables pueden influir en los servicios que ofrezco, por eso a continuación se presentan las <strong>tarifas básicas</strong>. Lo que los precios pueden ajustarse según factores como la distancia, la duración o los servicios personalizados.</p>
-          
+          <Container>
           <table class="pricing-table">
             <thead>
               <tr>
@@ -156,6 +156,7 @@ function App() {
               </tr>
             </tbody>
           </table>
+          </Container>
 
           <p class="note">*Las tarifas pueden variar según la ubicación, el número de mascotas o servicios adicionales. Contáctame para una cotización personalizada o servicio que necesites.</p>
         </section>
