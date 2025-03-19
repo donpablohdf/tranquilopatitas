@@ -88,6 +88,11 @@ body {
     object-fit: cover;
   }
 
+  .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
   /* Estilo general para la tabla de precios */
 .pricing-table {
   width: 100%;
@@ -140,7 +145,7 @@ body {
   font-size: 0.9rem; /* Tamaño de fuente más pequeño */
   color: #777; /* Color de texto más tenue */
   margin-top: 1rem; /* Espacio superior */
-  text-align: center; /* Centra el texto */
+  text-align: left; 
 }
   
   /* Media query for small mobile devices (portrait) */

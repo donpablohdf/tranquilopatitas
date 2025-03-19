@@ -102,63 +102,64 @@ function App() {
 
     {
       path: '/precios-mascotas-leon', icon: <FaDollarSign />, title: 'Tarifas', subtitle: 'Precios básicos', imageSrc: '/imgs/precios-mascotas-leon.webp', imageAlt: 'Precios mascotas León', content: <>
-        <section>          
+        <section>
           <p>Muchas variables pueden influir en los servicios que ofrezco, por eso a continuación se presentan las <strong>tarifas básicas</strong>. Lo que los precios pueden ajustarse según factores como la distancia, la duración o los servicios personalizados.</p>
-          <Container>
-          <table class="pricing-table">
-            <thead>
-              <tr>
-                <th>Servicio</th>
-                <th>Tarifa Básica</th>
-                <th>Detalles</th>
-              </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>Alojamiento 24h</td>
-                <td>Consultar</td>
-                <td>Consulta precios por semanas, días o meses</td>
-              </tr>
-              <tr>
-                <td>Paseo de perros </td>
-                <td>10 € / hora</td>
-                <td>Consulta precios por semanas o meses y cantidad de horas</td>
-              </tr>
-              <tr>
-                <td>Paseos temáticos </td>
-                <td>Consultar</td>
-                <td>Precios por actividad (playa,montaña, etc)</td>
-              </tr>
-              <tr>
-                <td>Cuidado Nocturno</td>
-                <td>30 €</td>
-                <td>Por noche, <strong>en tu hogar</strong>.</td>
-              </tr>
-              <tr>
-                <td>Guardería Diurna</td>
-                <td>50 €</td>
-                <td><strong>En mi hogar</strong>. Con paseos y actividades incluidas.</td>
-              </tr>
-              <tr>
-                <td>Visitas a domicilio</td>
-                <td>10 €</td>
-                <td>Por visita</td>
-              </tr>
-              <tr>
-                <td>Comida a domicilio</td>
-                <td>Según menú</td>
-                <td>Consulta para ver condiciones</td>
-              </tr>
-              <tr>
-                <td>Veterinario</td>
-                <td>15 €</td>
-                <td>Recogida, traslado y entrega en tu hogar.</td>
-              </tr>
-            </tbody>
-          </table>
-          </Container>
+          <div className="table-responsive">
+            <table class="pricing-table">
+              <thead>
+                <tr>
+                  <th>Servicio</th>
+                  <th>Tarifa Básica</th>
+                  <th>Detalles</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><NavLink to="/alojamiento-mascotas-leon">Alojamiento 24h</NavLink></td>
+                  <td>Consultar</td>
+                  <td><NavLink to="/contacto-mascotas-leon">Contáctame</NavLink> para precios por semanas, días o meses</td>
+                </tr>
+                <tr>
+                  <td><NavLink to="/cuidado-domicilio-mascotas-leon">Cuidado Nocturno</NavLink></td>
+                  <td>30 €</td>
+                  <td>Por noche, <strong>en tu hogar</strong>.</td>
+                </tr>
+                <tr>
+                  <td><NavLink to="/visitas-domicilio-mascotas-leon">Visitas a domicilio</NavLink></td>
+                  <td>10 €</td>
+                  <td>Por visita</td>
+                </tr>
+                <tr>
+                  <td><NavLink to="/guarderia-dia-mascotas-leon">Guardería de día</NavLink></td>
+                  <td>50 €</td>
+                  <td><strong>En mi hogar</strong>. Con paseos y actividades incluidas.</td>
+                </tr>
 
-          <p class="note">*Las tarifas pueden variar según la ubicación, el número de mascotas o servicios adicionales. Contáctame para una cotización personalizada o servicio que necesites.</p>
+                <tr>
+                  <td><NavLink to="/paseo-perros-leon">Paseo de perros</NavLink></td>
+                  <td>10 € / hora</td>
+                  <td><NavLink to="/contacto-mascotas-leon">Contáctame</NavLink> para precios por semanas o meses y cantidad de horas</td>
+                </tr>
+                <tr>
+                  <td><NavLink to="/paseo-perros-leon">Paseos temáticos</NavLink></td>
+                  <td><NavLink to="/contacto-mascotas-leon">Contáctame</NavLink></td>
+                  <td>Precios por actividad (playa,montaña, etc)</td>
+                </tr>
+                <tr>
+                  <td><NavLink to="/comida-mascotas-leon">Comida a domicilio</NavLink></td>
+                  <td>Según menú</td>
+                  <td><NavLink to="/contacto-mascotas-leon">Contáctame</NavLink> para ver condiciones</td>
+                </tr>
+                <tr>
+                  <td><NavLink to="/contacto-mascotas-leon">Veterinario</NavLink></td>
+                  <td>15 €</td>
+                  <td>Recogida, traslado y entrega en tu hogar.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="note">*Las tarifas pueden variar según la ubicación, el número de mascotas o servicios adicionales. <NavLink to="/contacto-mascotas-leon">Contáctame</NavLink> para una cotización personalizada o servicio que necesites.</p>
         </section>
       </>
     },
