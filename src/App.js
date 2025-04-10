@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Route, NavLink, Routes, useLocation } from 'react-router-dom';
-import { FaHome, FaBed, FaDog, FaWalking, FaCalendarAlt, FaPaw, FaEnvelope, FaUtensils, FaStethoscope, FaDollarSign } from 'react-icons/fa';
-import Section from './components/Section';
+import React, { Suspense, useEffect, useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { FaBed, FaCalendarAlt, FaDog, FaDollarSign, FaEnvelope, FaHome, FaPaw, FaStethoscope, FaUtensils, FaWalking } from 'react-icons/fa';
+import { NavLink, Route, Routes, useLocation } from 'react-router-dom';
 import './css/App.css';
 import Logo from './imgs/logo.js';
+
+const Section = React.lazy(() => import('./components/Section'));
 
 function App() {
   const [expanded, setExpanded] = useState(false);
@@ -18,7 +19,6 @@ function App() {
       window.scrollTo(0, 0);
     }
   }, [location]);
-
 
   const handleNavClick = () => {
     if (expanded) {
@@ -288,27 +288,26 @@ function App() {
   return (
     <>
       <header className="banner-header py-2">
-        <div className="d-flex flex-column justify-content-center align-items-left" >
+        <div className="d-flex flex-column justify-content-center align-items-left">
           <h1 className="mb-2">Tranquilopatitas: Cuidado de Mascotas en León</h1>
           <p className="mb-0">Tu solución de confianza para el bienestar y el cuidado de tus mascotas en León.</p>
         </div>
       </header>
 
       <Navbar expand="lg" className="d-flex sticky-top custom-navbar" expanded={expanded} collapseOnSelect>
-        <Container fluid> {/* Usamos Container fluid para ocupar todo el ancho */}
-          <div className='d-flex  w-100'> {/* Contenedor para alinear logo, botón y collapse */}
-            <div className={`d-flex align-items-center justify-content-end mr-5  ${expanded ? 'd-none' : ''}`}> {/* Contenedor para el logo */}
-              <Logo color='#FFFFFF' />
-
+        <Container fluid>
+          <div className="d-flex w-100">
+            <div className={`d-flex align-items-center justify-content-end mr-5 ${expanded ? 'd-none' : ''}`}>
+              <Logo color="#FFFFFF" />
             </div>
-            <div className='d-flex flex-column w-100 ms-5'>
+            <div className="d-flex flex-column w-100 ms-5">
               <Navbar.Toggle
                 aria-controls="basic-navbar-nav"
                 onClick={() => setExpanded(!expanded)}
-                className={`ms-auto ${expanded ? 'd-none' : ''}`} // Añadimos la clase d-none
+                className={`ms-auto ${expanded ? 'd-none' : ''}`}
               />
             </div>
-            <div className='d-flex flex-column w-100'>
+            <div className="d-flex flex-column w-100">
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
                   {navLinks.map((link, index) => (
@@ -317,7 +316,7 @@ function App() {
                         to={link.path}
                         end
                         onClick={handleNavClick}
-                        className={({ isActive }) => (isActive ? "active-link nav-link" : "nav-link")}
+                        className={({ isActive }) => (isActive ? 'active-link nav-link' : 'nav-link')}
                       >
                         {link.icon} {link.title}
                       </NavLink>
@@ -329,13 +328,16 @@ function App() {
           </div>
         </Container>
       </Navbar>
+
       <div className="d-flex flex-column mt-3 w-100">
         <Container className="mt-2 flex-grow-1">
-          <Routes>
-            {navLinks.map((link, index) => (
-              <Route key={index} path={link.path} element={<Section {...link} />} />
-            ))}
-          </Routes>
+          <Suspense fallback={<div>Cargando...</div>}>
+            <Routes>
+              {navLinks.map((link, index) => (
+                <Route key={index} path={link.path} element={<Section {...link} />} />
+              ))}
+            </Routes>
+          </Suspense>
         </Container>
 
         <footer className="container app-footer">

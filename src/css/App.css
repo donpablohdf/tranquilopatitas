@@ -41,7 +41,8 @@ h5,
 h6 {
   font-family: 'Merriweather', serif;
 }
-a{
+
+a {
   color: var(--navbar-background-color);
 }
 
@@ -53,7 +54,7 @@ a{
   text-align: left;
   width: 100%;
   overflow: visible;
- 
+
 }
 
 /* Estilos del título principal (h1) en el banner */
@@ -71,7 +72,7 @@ a{
 .banner-header p {
   font-size: 1rem;
   margin: 0;
-  
+
   /* Oculto en pantallas pequeñas */
 }
 
@@ -82,7 +83,7 @@ a{
   text-align: center;
   font-size: 0.8em;
   width: 100%;
- 
+
 }
 
 /* Estilos de la barra de navegación */
@@ -90,8 +91,9 @@ a{
   background-color: var(--navbar-background-color);
   color: var(--white-color) !important;
   font-family: 'Poppins', sans-serif;
-  width: auto; /* Asegura el ancho completo */ 
-  
+  width: auto;
+  /* Asegura el ancho completo */
+
 }
 
 /* Estilos de los enlaces en la barra de navegación */
@@ -144,7 +146,7 @@ h3 {
 /* Estilos de las imágenes responsivas */
 .imagen-responsiva {
   width: 100%;
-  height: 100%;
+  height: auto;
   max-width: 300px;
   object-fit: cover;
 }
@@ -224,11 +226,13 @@ h3 {
     max-width: 100%;
     /* Ancho completo en dispositivos móviles */
   }
+
   .banner-header h1 {
     font-size: 0.8rem;
     text-align: center;
   }
-  .banner-header p {    
+
+  .banner-header p {
     display: none;
     /* Oculto en pantallas pequeñas */
   }
@@ -242,9 +246,11 @@ h3 {
     max-width: 50%;
     /* Mitad del ancho en tablets */
   }
+
   .banner-header h1 {
     font-size: 1rem;
   }
+
   /* No es necesario cambiar la dirección del flex aquí a menos que haya un diseño específico */
 }
 
@@ -254,9 +260,11 @@ h3 {
     max-width: 40%;
     /* 40% del ancho en laptops pequeñas */
   }
+
   .banner-header h1 {
     font-size: 1rem;
   }
+
   /* No es necesario cambiar la dirección del flex aquí a menos que haya un diseño específico */
 }
 
@@ -266,8 +274,10 @@ h3 {
     max-width: 30%;
     /* 30% del ancho en laptops grandes y escritorios */
   }
+
   .banner-header h1 {
     font-size: 1.5rem;
   }
+
   /* No es necesario cambiar la dirección del flex aquí a menos que haya un diseño específico */
 }
