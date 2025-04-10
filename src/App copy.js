@@ -296,40 +296,38 @@ function App() {
 
       <Navbar expand="lg" className="d-flex sticky-top custom-navbar" expanded={expanded} collapseOnSelect>
         <Container fluid> {/* Usamos Container fluid para ocupar todo el ancho */}
-          <div className='d-flex  w-100'> {/* Contenedor para alinear logo, botón y collapse */}
+          <div className='d-flex align-items-center justify-content-between w-100'> {/* Contenedor para alinear logo, botón y collapse */}
             <div className={`d-flex align-items-center justify-content-end mr-5  ${expanded ? 'd-none' : ''}`}> {/* Contenedor para el logo */}
               <Logo color='#FFFFFF' />
 
             </div>
-            <div className='d-flex flex-column w-100 ms-5'>
+            <div className='ms-5'>
               <Navbar.Toggle
                 aria-controls="basic-navbar-nav"
                 onClick={() => setExpanded(!expanded)}
                 className={`ms-auto ${expanded ? 'd-none' : ''}`} // Añadimos la clase d-none
               />
             </div>
-            <div className='d-flex flex-column w-100'>
-              <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="me-auto">
-                  {navLinks.map((link, index) => (
-                    <Nav.Item key={index}>
-                      <NavLink
-                        to={link.path}
-                        end
-                        onClick={handleNavClick}
-                        className={({ isActive }) => (isActive ? "active-link nav-link" : "nav-link")}
-                      >
-                        {link.icon} {link.title}
-                      </NavLink>
-                    </Nav.Item>
-                  ))}
-                </Nav>
-              </Navbar.Collapse>
-            </div>
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="me-auto">
+                {navLinks.map((link, index) => (
+                  <Nav.Item key={index}>
+                    <NavLink
+                      to={link.path}
+                      end
+                      onClick={handleNavClick}
+                      className={({ isActive }) => (isActive ? "active-link nav-link" : "nav-link")}
+                    >
+                      {link.icon} {link.title}
+                    </NavLink>
+                  </Nav.Item>
+                ))}
+              </Nav>
+            </Navbar.Collapse>
           </div>
         </Container>
       </Navbar>
-      <div className="d-flex flex-column mt-3 w-100">
+      <div className="d-flex flex-column mt-3">
         <Container className="mt-2 flex-grow-1">
           <Routes>
             {navLinks.map((link, index) => (
