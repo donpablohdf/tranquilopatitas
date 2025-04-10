@@ -86,14 +86,19 @@ a {
 
 }
 
-/* Estilos de la barra de navegación */
+/* Contenedor de la barra de navegación */
 .custom-navbar {
+  display: flex;
+  justify-content: space-between;
+  /* Asegura que el logo y el botón estén en extremos opuestos */
+  align-items: center;
+  /* Centra verticalmente los elementos */
   background-color: var(--navbar-background-color);
-  color: var(--white-color) !important;
-  font-family: 'Poppins', sans-serif;
-  width: auto;
-  /* Asegura el ancho completo */
-
+  padding: 0.5rem 1rem;
+  /* Márgenes internos */
+  color: var(--white-color);
+  height: 70px;
+  /* Define una altura fija para la barra de navegación */
 }
 
 /* Estilos de los enlaces en la barra de navegación */
@@ -111,23 +116,48 @@ a {
   background-color: var(--link-hover-color);
 }
 
-
 /* Estilos del enlace activo */
 .active-link {
   background-color: var(--link-hover-color);
 }
 
-/* Estilos del botón de alternancia (toggler) */
-.navbar-toggler {
-  color: var(--white-color);
-  background-color: var(--white-color);
-  margin-left: 1rem;
+.navbar-nav {
+  margin-top: 10px;
 }
 
-/* Estilos del logo en la barra de navegación */
+/* Estilos del logo */
 .navbar-brand-custom {
-  flex: 0 0 auto;
-  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  /* Centra el contenido verticalmente */
+  height: 100%;
+  /* Asegura que el contenedor ocupe toda la altura del padre */
+  margin-right: auto;
+  /* Alinea el logo a la izquierda */
+  padding: 0;
+  /* Elimina cualquier padding adicional */
+}
+
+.navbar-brand-custom img {
+  max-height: 100%;
+  /* Asegura que el logo ocupe toda la altura del contenedor */
+  width: auto;
+  /* Mantiene la proporción del logo */
+}
+
+/* Estilos del botón de alternancia (toggler) */
+.navbar-toggler {
+  margin-left: auto;
+  /* Asegura que el botón esté alineado a la derecha */
+  margin-right: 10px;
+  /* Ajusta el margen derecho */
+  padding: 0.5rem 1rem;
+  /* Ajusta el tamaño del botón */
+  font-size: 1.5rem;
+  background-color: var(--white-color);
+  border: none;
+  color: var(--navbar-background-color);
+  border-radius: 5px;
 }
 
 /* Estilos de las tarjetas */
@@ -237,6 +267,25 @@ h3 {
     /* Oculto en pantallas pequeñas */
   }
 
+  .custom-navbar {
+    padding: 0.5rem;
+    /* Reduce el padding en pantallas pequeñas */
+  }
+
+  .navbar-brand-custom {
+    max-height: 60px;
+    /* Ajusta el tamaño del logo */
+    max-width: 160px;
+  }
+
+  .navbar-toggler {
+    font-size: 1.2rem;
+    /* Ajusta el tamaño del botón */
+    padding: 0.4rem 0.8rem;
+    margin-right: 5px;
+    /* Reduce el margen derecho */
+  }
+
   /* No es necesario cambiar la dirección del flex aquí a menos que haya un diseño específico */
 }
 
@@ -249,6 +298,25 @@ h3 {
 
   .banner-header h1 {
     font-size: 1rem;
+  }
+
+  .custom-navbar {
+    padding: 0.5rem;
+    /* Reduce el padding en pantallas pequeñas */
+  }
+
+  .navbar-brand-custom {
+    max-height: 60px;
+    /* Ajusta el tamaño del logo */
+    max-width: 160px;
+  }
+
+  .navbar-toggler {
+    font-size: 1.2rem;
+    /* Ajusta el tamaño del botón */
+    padding: 0.4rem 0.8rem;
+    margin-right: 5px;
+    /* Reduce el margen derecho */
   }
 
   /* No es necesario cambiar la dirección del flex aquí a menos que haya un diseño específico */

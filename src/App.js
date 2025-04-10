@@ -296,36 +296,34 @@ function App() {
 
       <Navbar expand="lg" className="d-flex sticky-top custom-navbar" expanded={expanded} collapseOnSelect>
         <Container fluid>
-          <div className="d-flex w-100">
-            <div className={`d-flex align-items-center justify-content-end mr-5 ${expanded ? 'd-none' : ''}`}>
-              <Logo color="#FFFFFF" />
-            </div>
-            <div className="d-flex flex-column w-100 ms-5">
-              <Navbar.Toggle
-                aria-controls="basic-navbar-nav"
-                onClick={() => setExpanded(!expanded)}
-                className={`ms-auto ${expanded ? 'd-none' : ''}`}
-              />
-            </div>
-            <div className="d-flex flex-column w-100">
-              <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="me-auto">
-                  {navLinks.map((link, index) => (
-                    <Nav.Item key={index}>
-                      <NavLink
-                        to={link.path}
-                        end
-                        onClick={handleNavClick}
-                        className={({ isActive }) => (isActive ? 'active-link nav-link' : 'nav-link')}
-                      >
-                        {link.icon} {link.title}
-                      </NavLink>
-                    </Nav.Item>
-                  ))}
-                </Nav>
-              </Navbar.Collapse>
-            </div>
+          {/* Contenedor del logo */}
+          <div className="navbar-brand-custom">
+            <Logo color="#FFFFFF" />
           </div>
+
+          {/* Botón desplegable */}
+          <Navbar.Toggle
+            aria-controls="basic-navbar-nav"
+            onClick={() => setExpanded(!expanded)}
+            className="navbar-toggler"
+          />
+
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              {navLinks.map((link, index) => (
+                <Nav.Item key={index}>
+                  <NavLink
+                    to={link.path}
+                    end
+                    onClick={handleNavClick}
+                    className={({ isActive }) => (isActive ? 'active-link nav-link' : 'nav-link')}
+                  >
+                    {link.icon} {link.title}
+                  </NavLink>
+                </Nav.Item>
+              ))}
+            </Nav>
+          </Navbar.Collapse>
         </Container>
       </Navbar>
 
